@@ -1,0 +1,82 @@
+<p-growl [(value)]="msgs" key="top-corner"></p-growl>
+<div class="container">
+  <div class="row">
+	<div class="col-lg-6"> 
+		<!-- Page Title Start -->
+		<h2 class="page--title h5"><i class="fa fa-user"></i> Students</h2>
+		<!-- Page Title End -->
+	</div>
+	<div class="col-lg-6 text-right">
+		<a [routerLink]="'/student/create'" class="btn btn-rounded btn-warning">Add Student</a>
+	</div>    
+	<div class="col-lg-12 d-flex justify-content-center" *ngIf="loadSpinner"> 
+		<p-progressSpinner ></p-progressSpinner>		
+	</div>
+	<div class="table-responsive">
+    <p-table #userListing [columns]="cols" [value]="users" [paginator]="true" [rows]="10" [rowsPerPageOptions]="[10,25,50]" paginatorPosition="both" *ngIf="users?.length > 0">
+		
+		<ng-template pTemplate="header" let-columns>			
+			<tr class="custom-white">
+				<th colspan="4">				
+					<input type="text" class="global-search" pInputText placeholder="Search" (input)="userListing.filterGlobal($event.target.value, 'contains')" style="width:50%; margin-right:2%; ">
+					
+					<p-dropdown [style]="{'width':'20%','margin-right':'2%'}" [options]="statuses" (onChange)="userListing.filter($event.value, 'status', 'equals')"></p-dropdown>
+				</th>
+				<th class="recordsPerPageTitle">
+					Records to Display:
+				</th>
+			</tr>
+			<tr>       
+				<ng-container *ngFor="let col of columns">
+					<th width="200" [pSortableColumn]="col.field" *ngIf="col.header != ''" >
+						{{col.header}}
+						<p-sortIcon [field]="col.field" ariaLabel="Activate to sort" ariaLabelDesc="Activate to sort in descending order" ariaLabelAsc="Activate to sort in ascending order"></p-sortIcon>
+					</th>
+				</ng-container>
+				<th width="400">Actions</th>
+			</tr>
+        </ng-template>
+		
+		
+      <ng-template pTemplate="body" let-user>
+        <tr>
+          <td>{{ user.name }}</td>
+          <td>{{ user.username }}</td>
+          <td>{{ user.email }}</td>
+          <td>
+		    <span *ngIf="user.status == 'disabled'">
+              Disabled
+            </span> 
+			<span *ngIf="user.status != 'disabled'">
+              Enabled
+            </span>
+		  </td>
+          <td>
+			<span *ngIf="user.status == 'disabled'">
+				<a title="Enable" class='btn bg-success listing-actions' (click)="enableUser(user.id)"><i class="fa fa-check"></i></a>
+			</span> 
+			<span *ngIf="user.status != 'disabled'">
+				<a title="Disable" class='btn bg-danger listing-actions' (click)="disableUser(user.id)" ><i class="fa fa-close"></i></a>
+			</span>	
+			<a title="Change Password" class='btn bg-primary listing-actions' (click)="changePassword(user.id)" ><i class="fa fa-lock"></i></a>
+			<a title="Edit" class='btn bg-primary listing-actions' [routerLink]="'/student/edit/' + user.id" ><i class="fa fa-pencil-square-o"></i></a>
+			<a title="View" [routerLink]="'/student/view/' + user.id" class='btn bg-primary listing-actions' ><i class="fa fa-search"></i></a>
+			<!-- <a title="Delete" class='btn bg-danger listing-actions' (click)="deleteUser(user.id)" ><i class="fa fa-trash"></i></a> -->
+			
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+	</div>
+  </div>
+</div>
+<form (submit)="doPasswordChange()">
+  <p-dialog header="Change Password" [(visible)]="passwordDialogVisible" [modal]="true" [responsive]="true" [style]="{width: '600px'}" [minY]="70" [baseZIndex]="10000">
+    <p><b>Update Password for {{ selectedUser?.name }}</b></p>
+    <input id="newPassword" name="myPassword" type="password" pPassword [(ngModel)]="newPassword" />
+    <p-footer>
+      <p-button type="submit" label="Update"></p-button>
+    </p-footer>
+  </p-dialog>
+</form>
+<p-confirmDialog header="Confirmation" icon="pi pi-exclamation-triangle"></p-confirmDialog>

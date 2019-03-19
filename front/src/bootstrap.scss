@@ -1,0 +1,31 @@
+/*!
+ * Bootstrap v4.0.0 (https://getbootstrap.com)
+ * Copyright 2011-2018 The Bootstrap Authors
+ * Copyright 2011-2018 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+@import "functions";
+@import "variables";
+@import "mixins";
+@import "root";
+@import "reboot";
+@import "images";
+@import "code";
+@import "grid";
+@import "buttons";
+@import "transitions";
+@import "dropdown";
+@import "nav";
+@import "navbar";
+@import "media";
+@import "utilities";
+@import "print";
+@import "badge";
+
+.navbar-nav {
+  flex-direction: row;
+}
+.navbar-nav .nav-item {
+  padding-right: 20px;
+}

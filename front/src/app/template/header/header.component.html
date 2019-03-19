@@ -1,0 +1,100 @@
+ <!-- Navbar Start -->
+<header class="navbar navbar-fixed">
+	<!-- Navbar Header Start -->
+	<div class="navbar--header">
+		<!-- Logo Start -->
+		<a class="logo" href="#" routerLink="/"><img src="assets/128.png" /></a>
+		<!-- Logo End -->
+
+		<!-- Sidebar Toggle Button Start -->
+		<a href="javascript:void(0);" class="navbar--btn" data-toggle="sidebar" title="Toggle Sidebar" *ngIf="loggedInMenus">
+			<i class="fa fa-bars"></i>
+		</a>
+		<!-- Sidebar Toggle Button End -->
+	</div>
+	<!-- Navbar Header End -->
+
+	<!-- Sidebar Toggle Button Start -->
+	<a href="javascript:void(0);" class="navbar--btn" data-toggle="sidebar" title="Toggle Sidebar" *ngIf="loggedInMenus">
+		<i class="fa fa-bars"></i>
+	</a>
+	<!-- Sidebar Toggle Button End -->	
+	<div class="navbar--nav" *ngIf="!loggedInMenus">
+		<ul class="nav">
+
+			<li class="nav-item">
+				<a routerLink="/login" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><i class="fa fa-user"></i> Login</a>
+			</li>
+			<li class="nav-item">				
+				<a routerLink="/admin-login" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><i class="fa fa-user"></i> Admin Login</a>
+			</li>
+		</ul>
+	</div>
+	
+	<div class="navbar--nav ml-auto">
+		<ul class="nav">
+			<!-- Nav User Start -->
+			<li class="nav-item dropdown nav--user online" *ngIf="loggedInMenus">
+				<a href="javascript:return false;" (click)="menu.toggle($event)" class="nav-link" data-toggle="dropdown">
+					<img src="http://bookkeeper.shredex.net/resources/assets/images/placeholder.jpg" alt="" class="rounded-circle">
+					<span>{{userData.name}}</span>
+					<i class="fa fa-angle-down"></i>
+				</a>
+
+				<ul class="dropdown-menu">
+					<li *ngFor="let item of items; let i = index">
+						<a routerLink="{{item.routerLink}}" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" ><i class="fa {{item.icon}}"></i>{{item.label}}</a>
+					</li>
+				</ul>
+				
+			</li>
+			
+			<!-- Nav User End -->
+		</ul>
+	</div>
+</header>
+<!-- Navbar End -->
+
+<!-- Sidebar Start -->
+<aside class="sidebar" data-trigger="scrollbar" *ngIf="loggedInMenus">
+	<!-- Sidebar Navigation Start -->
+	<div class="sidebar--nav">
+		<ul>
+			<li>
+				<ul>
+					<li class="active">
+						<a routerLink="/dashboard" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+							<i class="fa fa-home"></i>
+							<span>Dashboard</span>
+						</a>
+					</li>
+					
+					<li class="active">
+						<a routerLink="/teachers" *ngIf="userData.role == 'admin'">
+							<i class="fa fa-group"></i>
+							<span>Manage Teachers</span>
+						</a>
+					</li>
+					
+					<li class="active">
+						<a routerLink="/students" *ngIf="userData.role == 'admin'">
+							<i class="fa fa-group"></i>
+							<span>Manage Students</span>
+						</a>
+					</li>
+					
+					<!-- <li *ngIf="userData.role == 'admin'">
+						<a routerLink="/contract-list">
+							<i class="fa fa-group"></i>
+							<span>Manage Contracts</span>
+						</a>
+					</li> -->					
+				</ul>
+			</li>
+
+		</ul>
+	</div>
+	<!-- Sidebar Navigation End -->
+
+</aside>
+<!-- Sidebar End -->

@@ -1,0 +1,23 @@
+<form (submit)="doAuth()">
+  <div class="ui-g">
+	<p-panel header="Login" class="ui-g-12 ui-g-offset-0 ui-xl-2 ui-xl-offset-5 ui-md-6 ui-md-offset-3 loginPanel">
+	  <div class="ui-g ui-fluid">
+		<p-messages id="loginMessage" [(value)]="msgs" [closable]="false"></p-messages>
+		<div class="ui-inputgroup ui-g-12">
+		  <span class="ui-inputgroup-addon"><i class="fa fa-user"></i></span>
+		  <input name="username" [(ngModel)]="username" type="text" pInputText placeholder="Username">
+		</div>
+	  </div>
+	  <div class="ui-g ui-fluid">
+		<div class="ui-inputgroup ui-g-12">
+		  <span class="ui-inputgroup-addon"><i class="fa fa-lock"></i></span>
+		  <input name="password" [(ngModel)]="password" type="password" pInputText placeholder="Password">
+		</div>
+	  </div>
+
+	  <p-footer>
+		<div class="text-right"> <!-- <a style="color:#1F89CE;" href="#" routerLink="/forgot-password">Forgot Password</a>  --><p-button type="submit" label="Login"></p-button></div>
+	  </p-footer>
+	</p-panel>
+  </div>
+</form>

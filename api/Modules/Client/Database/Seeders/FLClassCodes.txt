@@ -1,0 +1,1320 @@
+0005 Farm—Nursery Employees & Drivers
+0008 Farm—Potato & Drivers
+0016 Fruit Picking by Contractors & Drivers
+0016 Fruit Picking by Contractors & Drivers
+0030 Sugarcane Plantation & Drivers
+0034 Farm
+0034 Farm
+0035 Farm—Florist & Drivers
+0035 Farm—Florist & Drivers
+0036 Farm—Dairy & Drivers
+0036 Farm—Dairy & Drivers
+0037 Farm
+0042 Landscape Gardening & Drivers
+0042 Landscape Gardening & Drivers
+0050 Grove Caretaking by Contractor & Drivers
+0050 Grove Caretaking by Contractor & Drivers
+0052 Orchard and Grove Owners and Operators—All Operations & Drivers
+0052 Orchard and Grove Owners and Operators—All Operations & Drivers
+0079 Vineyard & Drivers
+0079 Vineyard & Drivers
+0083 Artificial Insemination of Cattle—All Other Employees & Drivers
+0083 Farm
+0106 Stump Removal Operations—By Specialist Contractor & Drivers
+0106 Stump Removal Operations—By Specialist Contractor & Drivers
+0106 Tree Pruning and Removal—All Operations & Drivers—Natural Catastrophe
+0106 Tree Pruning and Removal—All Operations & Drivers—Natural Catastrophe
+0106 Tree Pruning, Spraying, Repairing—All Operations & Drivers
+0106 Tree Pruning, Spraying, Repairing—All Operations & Drivers
+0106 Tree Pruning, Trimming, or Spraying—All Operations & Drivers for Existing Right-of-Way—Electric, Power, Telephone, Burglar, or Fire Alarm Lines
+0106 Tree Pruning, Trimming, or Spraying—All Operations & Drivers for Existing Right-of-Way—Electric, Power, Telephone, Burglar, or Fire Alarm Lines
+0113 Farm—Fish Hatchery & Drivers
+0113 Farm—Fish Hatchery & Drivers
+0153 Lawn or Shrub Spraying & Drivers
+0153 Lawn or Shrub Spraying & Drivers
+0170 Farm—Animal Raising & Drivers.
+0170 Farm—Animal Raising & Drivers.
+0173 Farm—Berry & Drivers
+0173 Farm—Berry & Drivers
+0251 Irrigation Works Operation & Drivers.
+0251 Irrigation Works Operation & Drivers.
+0400 Cotton Compressing & Drivers
+0400 Cotton Compressing & Drivers
+0401 Cotton Gin Operation & Local Managers, Drivers
+0908 Domestic Workers—Residences—Part-Time
+0913 Domestic Workers—Residences—Full-Time
+0917 Pet Sitting Services & Drivers
+0917 Residential Cleaning Services by Contractor—Inside
+1005 Coal Mining—Surface & Drivers
+1164 Mining NOC—Not Coal—Underground & Drivers
+1165 Mining NOC—Not Coal—Surface & Drivers
+1218 Fuller’s Earth Mining & Drivers
+1218 Phosphate Mining & Drivers
+1218 Phosphate Mining & Drivers
+1320 Oil or Gas—Lease Operator—All Operations & Drivers
+1320 Oil or Gas—Lease Operator—All Operations & Drivers
+1322 Oil or Gas—Well—Cleaning or Swabbing of Wells—By Specialist Contractor—No Drilling & Drivers
+1322 Oil or Gas—Well—Cleaning or Swabbing of Wells—By Specialist Contractor—No Drilling & Drivers
+1430 Lead Mfg. & Drivers.
+1430 Lead Mfg. & Drivers.
+1430 Smelting, Sintering, or Refining—Lead & Drivers
+1430 Smelting, Sintering, or Refining—Lead & Drivers
+1438 Blast Furnace Operation & Driver.
+1438 Blast Furnace Operation & Driver.
+1438 Calcium Carbide Mfg. & Drivers
+1438 Calcium Carbide Mfg. & Drivers
+1438 Magnesium Metal Mfg.—All Operations & Drivers.
+1438 Magnesium Metal Mfg.—All Operations & Drivers.
+1438 Smelting, Sintering, or Refining—Metals—Not Iron or Lead NOC & Drivers
+1438 Smelting, Sintering, or Refining—Metals—Not Iron or Lead NOC & Drivers
+1438 Smelting—Electric Process & Drivers.
+1438 Smelting—Electric Process & Drivers.
+1452 Graphite Mfg.—Not Artificial & Drivers.
+1452 Graphite Mfg.—Not Artificial & Drivers.
+1452 Ore Milling & Drivers
+1463 Asphalt Works Operated by Paving Contractors—Permanent Location & Drivers
+1463 Asphalt Works Operated by Paving Contractors—Permanent Location & Drivers
+1463 Coal Billet or Briquet Mfg. & Drivers
+1472 Alcohol Mfg.—Wood & Drivers
+1472 Charcoal Mfg. & Drivers.
+1472 Creosote Mfg. & Drivers.
+1472 Distillation—Wood & Drivers.
+1473 Turpentine or Resin Mfg.—Steam or Nondestructive Process & Drivers
+1624 Quarry NOC & Drivers
+1624 Roofing—Slate Mfg. or Slate Splitting & Drivers.
+1624 Slag Digging and Crushing & Drivers
+1624 Slate Splitting or Roofing Slate Mfg. & Drivers
+1642 Lime Mfg.
+1654 Quarry—Cement Rock—Surface & Drivers
+1655 Quarry—Limestone—Surface & Drivers
+1699 Rock Wool Mfg.
+1701 Cement Mfg.
+1701 Plaster Mill.
+1710 Stone Crushing & Drivers.
+1741 Flint or Spar Grinding & Drivers.
+1741 Silica Grinding & Drivers.
+1741 Spar or Flint Grinding & Drivers.
+1747 Clay Milling & Drivers.
+1747 Emery Works & Drivers.
+1747 Talc Mill & Drivers.
+1748 Abrasive Wheel Mfg. & Drivers
+1803 Hone or Oil Stone Mfg. & Drivers.
+1803 Oil or Hone Stone Mfg. & Drivers.
+1803 Slate Milling & Drivers
+1803 Soapstone or Soapstone Products Mfg. & Drivers.
+1803 Stonecutting or Polishing NOC & Drivers.
+1852 Asbestos Goods Mfg.
+1853 Mica Goods Mfg. & Mica Preparing.
+1860 Abrasive Paper or Cloth Preparation
+1924 Cable Mfg. or Wire Drawing—Not Iron or Steel
+1924 Wire Drawing or Cable Mfg.
+1925 Die Casting Mfg.
+2002 Pasta or Noodle Mfg.
+2003 Pasta or Noodle Mfg.
+2014 Grain or Feed Milling
+2016 Cereal or Bar Mfg.
+2021 Sugar Manufacturing or Refining From Sugar Cane or Sugar Beets
+2032 Yarn or Thread Mfg.—Silk
+2039 Ice-Cream Mfg. & Drivers
+2041 Candy, Chocolate, and Confection Mfg.
+2065 Condensed Milk Mfg.
+2065 Malted Milk Mfg.
+2065 Milk Products Mfg. NOC
+2070 Butter or Cheese Mfg. & Route Supervisors, Drivers
+2070 Cheese or Butter Mfg. & Route Supervisors, Drivers
+2070 Creamery or Dairy & Route Supervisors, Drivers.
+2070 Dairy or Creamery & Route Supervisors, Drivers.
+2070 Milk Bottle Exchange—All Employees & Drivers
+2070 Milk Depot or Milk Dealer & Route Supervisors, Drivers
+2081 Butchering.
+2081 Slaughtering.
+2081 Stockyard—Butchering
+2089 Packing House—All Operations.
+2095 Fish
+2095 Meat Products Mfg. NOC.
+2095 Sausage or Sausage Casing Mfg.
+2105 Fruit Packing
+2110 Pickle Mfg.
+2111 Cannery NOC.
+2112 Fruit Evaporating or Preserving
+2114 Clam Digging.
+2114 Oyster Processing.
+2119 Citrus Products Processing & Drivers
+2121 Brewery & Drivers.
+2121 Malt House & Drivers
+2130 Alcohol Mfg.—Grain—All Operations
+2130 Distillery—Spirituous Liquor.
+2130 Spirituous Liquor Distillery
+2131 Spirituous Liquor Bottling
+2143 Fruit Juice Mfg. & Drivers
+2143 Winery & Drivers
+2157 Beverage Mfg.—Carbonated—All Operations, Route Supervisors, & Drivers
+2157 Bottling—All Operations & Route Supervisors, Drivers
+2157 Carbonated Beverage Mfg.—All Operations & Route Supervisors, Drivers.
+2172 Tobacco Products Mfg. NOC
+2174 Tobacco—Rehandling or Warehousing
+2211 Cotton Batting, Wadding, or Waste Mfg.
+2211 Shoddy Mfg.
+2211 Wool Combing or Scouring
+2211 Wool Separating
+2220 Carpet or Rug Mfg.—Jute or Hemp
+2220 Cord or Twine Mfg.—Cotton
+2220 Cordage, Rope, or Twine Mfg. NOC
+2220 Cotton Spinning and Weaving
+2220 Flax Spinning and Weaving
+2220 Hemp or Jute Spinning and Weaving
+2220 Jute or Hemp Spinning and Weaving
+2220 Linen Cloth Mfg.
+2220 Rope, Cordage, or Twine Mfg. NOC
+2220 Rug or Carpet Mfg.—Jute or Hemp
+2220 Thread or Yarn Mfg.—Cotton
+2220 Twine or Cord Mfg.—Cotton
+2220 Twine, Cordage, or Rope Mfg. NOC
+2220 Yarn or Thread Mfg.—Cotton
+2286 Wool Spinning and Weaving
+2286 Yarn Mfg.—Wool.
+2288 Felting Mfg.
+2300 Plush or Velvet Mfg.
+2300 Velvet or Plush Mfg.
+2302 Silk Thread or Yarn Mfg.
+2302 Silk Throwing and Weaving
+2302 Thread or Yarn Mfg.—Silk
+2305 Rayon Mfg.
+2305 Textile Fiber Mfg.—Synthetic
+2361 Hosiery Mfg.
+2362 Glove or Mitten Mfg.—Knit.
+2362 Knit Goods Mfg. NOC.
+2362 Mitten or Glove Mfg.—Knit.
+2380 Braid or Fringe Mfg.
+2380 Fringe or Braid Mfg.
+2380 Net Mfg.
+2380 Webbing Mfg.
+2386 Lace Mfg.
+2388 Embroidery Mfg.
+2402 Carpet or Rug Mfg. NOC
+2402 Rug or Carpet Mfg. NOC
+2413 Textile Bleaching, Dyeing, Mercerizing, Finishing
+2416 Thread or Yarn Dyeing or Finishing
+2416 Yarn or Thread Dyeing or Finishing
+2417 Cloth Printing.
+2501 Awning or Tent Mfg.—Shop
+2501 Bag or Sack Mfg.—Cloth.
+2501 Bag Renovating
+2501 Cloth, Canvas and Related Products Mfg. Noc
+2501 Collar Mfg.
+2501 Cushion, Pillow, or Quilt Mfg.
+2501 Doll Clothing, Cloth Dolls, or Cloth Parts Mfg.
+2501 Draperies or Curtains Mfg. From Cloth, Paper, or Plastic—Cutting and Sewing
+2501 Feather Pillow Mfg.
+2501 Fur Clothing Mfg.
+2501 Furnishing Goods Mfg. NOC.
+2501 Hat Mfg.
+2501 Lingerie Mfg.
+2501 Millinery Mfg.
+2501 Pillow, Quilt, or Cushion Mfg.
+2501 Quilt, Cushion, or Pillow Mfg.
+2501 Sailmaking
+2501 Shirt Mfg.
+2501 Sign Manufacturing—Silk Screen Printing—Cloth
+2501 Suspender Mfg.
+2501 Textile—Mending
+2501 Toy Mfg.—Cloth Stuffed Animals or Toys
+2501 Umbrella Mfg.
+2501 Window —Shade Mfg.
+2503 Dressmaking or Tailoring—Custom Exclusively.
+2503 Tailoring or Dressmaking—Custom Exclusively.
+2534 Feather or Flower Mfg.—Artificial
+2534 Flower or Feather Mfg.—Artificial
+2534 Hair Goods Mfg.
+2570 Box Spring or Mattress Mfg.
+2570 Mattress or Box Spring Mfg.
+2585 Carpet, Rug, or Upholstery Cleaning—Shop or Outside & Drivers
+2585 Diaper Service & Route Supervisor, Drivers.
+2585 Laundry NOC & Route Supervisors, Drivers
+2585 Rug, Carpet, or Upholstery Cleaning—Shop or Outside & Drivers
+2585 Upholstery, Carpet, or Rug Cleaning & Drivers.
+2586 Cleaning or Dyeing & Route Supervisors, Drivers.
+2586 Dyeing or Cleaning & Route Supervisors, Drivers.
+2587 Toilet or Towel Supply Co. & Route Supervisors, Drivers.
+2587 Towel or Toilet Supply Co. & Route Supervisors, Drivers.
+2589 Dry Cleaning and Laundry Store—Retail & Route Supervisors, Drivers.
+2589 Laundry and Dry Cleaning Store Retail & Route Supervisors, Drivers
+2600 Fur Processing—Preparing Skins
+2623 Leather Mfg.—Including Tanning, Leather Embossing, and Wool Pulling
+2651 Shoe Findings Mfg.
+2651 Shoe Stock Mfg.
+2660 Boot or Shoe Mfg. NOC
+2660 Shoe or Boot Mfg. NOC
+2670 Glove Mfg.—Leather or Textile.
+2683 Luggage Mfg.
+2688 Leather Belting Mfg.
+2688 Leather Goods Mfg. NOC
+2688 Pocketbook Mfg.
+2701 Logging or Tree Removal—Log Hauling & Drivers
+2702 Clearing of Right-of-Way—Electric, Power, Telephone, Burglar, or Fire Alarm Lines—Tree Removal—New Right-of-Way & Drivers
+2702 Logging or Lumbering & Drivers
+2709 Logging or Tree Removal—Mechanized Equipment Operators
+2710 Sawmill.
+2710 Shingle Mfg.—Wood
+2714 Veneer Mfg.
+2731 Planing or Molding Mill.
+2735 Barrel Stock Mfg.—Wood.
+2735 Cooperage Stock Mfg.
+2735 Furniture Stock Mfg.
+2735 Last Block Mfg.
+2735 Pencil Stock Mfg.—Wood
+2759 Box Mfg.—Box Shook or Pallet—Wooden
+2759 Pallet, Box or Box Shook Mfg.—Wooden
+2790 Last or Shoe Form Mfg.
+2790 Patternmaking NOC.
+2790 Shoe Form or Last Mfg.
+2790 Wood Carving—By Hand or Machine
+2797 Manufactured, Modular, or Prefabricated Home Manufacturing—Shop Work—All Operations & Drivers
+2799 Manufactured, Modular, or Prefabricated Home Setup, Hookup, or Installation at Building Site
+2802 Carpentry—Shop Only & Drivers
+2835 Brush or Broom Assembly
+2836 Brush or Broom Mfg. NOC
+2841 Brush or Broom Handle Mfg.
+2841 Cork Products Mfg. NOC
+2841 Pipe Mfg.—Wooden, Tobacco
+2841 Shade Roller Mfg.—Wood.
+2841 Shuttle Mfg.
+2841 Toy Mfg.—Wood
+2841 Window—Shade Roller Mfg.
+2841 Wood Turned Products Mfg. NOC
+2841 Woodenware Mfg. NOC
+2881 Barrel Assembly—Wood.
+2881 Casket or Coffin Mfg. or Assembly—Wood.
+2881 Coffin and Casket Mfg. or Assembly—Wood
+2881 Cooperage Assembly
+2881 Furniture Manufacturing and Cabinet Shop—Assembly by Hand—Wood
+2881 Picture Frame Assembling—No Manufacturing or Parts
+2881 Venetian Blind Assembly.
+2883 Furniture Manufacturing and Cabinet Shop—Wood—NOC
+2913 Rattan, Willow, or Twisted Fiber Products Mfg.
+2913 Willow, Rattan, or Twisted Fiber Products Mfg.
+2913 Willowware Mfg.
+2915 Plywood Mfg.
+2915 Veneer Products Mfg.
+2916 Veneer Products Mfg.
+2923 Musical Instrument Mfg.—Wood NOC
+2923 Organ Building & Installation
+2923 Piano—Mfg.
+2942 Crayon, Pencil, or Penholder Mfg.
+2942 Pencil, Penholder or Crayon Mfg.
+2942 Penholder, Crayon or Pencil Mfg.
+2960 Pole, Post, or Tie Yard & Drivers.
+2960 Tie, Post or Pole Yard & Drivers.
+2960 Wood Preserving & Drivers
+3004 Iron or Steel—Manufacturing—Steelmaking & Drivers.
+3018 Iron or Steel—Manufacturing—Rolling Mill & Drivers.
+3022 Pipe or Tube Mfg. NOC & Drivers
+3027 Lead Works & Drivers.
+3027 Pipe or Tube Mfg.—Lead & Drivers
+3027 Rolling Mill NOC & Drivers
+3028 Pipe or Tube Mfg.—Iron or Steel & Drivers
+3030 Iron or Steel—Fabrication—Ironworks or Steelworks—Shop—Structural & Drivers.
+3040 Iron or Steel—Fabrication—Ironworks—Shop—Ornamental & Drivers.
+3041 Iron or Steel—Fabrication—Ironworks—Shop—Decorative or Artistic & Foundries, Drivers.
+3042 Elevator or Escalator Mfg.
+3042 Escalator or Elevator Mfg.
+3064 Sign Manufacturing—Metal
+3064 Sign Manufacturing—Neon
+3064 Sign Manufacturing—Silk Screen Printing—Metal
+3076 Airplane Subassemblies Mfg.—Metal
+3076 Awning Mfg.—Metal
+3076 Awning Mfg.—Metal—Mfg. of Canvas Products or Mfg. of Metal Awnings Exclusively
+3076 Coppersmith—Shop
+3076 Jalousie or Jalousie Screen—Mfg.
+3076 Sheet Metal Products Mfg.
+3076 Soda Water Fountain or Apparatus Mfg.
+3081 Enameled Ironware Mfg.
+3081 Foundry—Ferrous—NOC
+3082 Car Wheel Mfg.—Railroad
+3082 Foundry—Steel Castings
+3085 Foundry—Nonferrous
+3110 Chain Mfg.—Forged
+3110 Forging Work—Drop or Machine.
+3110 Tool Mfg.—Drop or Machine Forged NOC—Forging Includes Trimming
+3111 Blacksmith.
+3111 Pipe Bending and Cutting
+3113 Tool Mfg.—Not Drop or Machine Forged NOC
+3114 Tool Mfg.—Drop or Machine Forged NOC—Machining or Finishing of Tools or Die Making Operations
+3118 File Mfg.
+3118 Saw Mfg.
+3118 Saw—Sharpening
+3119 Needle Mfg.
+3119 Pen Point Mfg.
+3122 Cutlery Mfg. NOC
+3122 Razor Mfg. NOC
+3126 Tool Mfg.—Agricultural, Construction, Logging, Mining, Oil, or Artesian Well
+3131 Button or Fastener Mfg.—Metal
+3131 Fastener or Button Mfg.—Metal
+3131 Zipper Mfg.
+3132 Bolt or Nut Mfg.
+3132 Nut or Bolt Mfg.
+3132 Spike Mfg.
+3145 Automatic Screw Machine Products Mfg.
+3145 Screw Mfg.
+3146 Hardware Mfg. NOC
+3146 Horseshoe Mfg.
+3146 Skate Mfg.
+3169 Stove Mfg.
+3175 Heater or Radiator Mfg.
+3175 Radiator or Heater Mfg.
+3179 Electrical Apparatus Mfg. NOC
+3180 Electric or Gas Lighting Fixtures Mfg.
+3180 Gas or Electric Lighting Fixtures Mfg.
+3188 Plumbers’ Supplies Mfg. NOC
+3220 Can Mfg.
+3223 Lamp or Portable Lantern Mfg.
+3223 Portable Lantern or Lamp Mfg.
+3224 Agate or Enamel Ware Mfg.
+3224 Enamel or Agate Ware Mfg.
+3227 Aluminum Ware Mfg.
+3240 Cable or Wire Rope Mfg.—Iron or Steel.
+3240 Wire Rope or Cable Mfg.—Iron or Steel
+3241 Wire Drawing—Iron or Steel
+3255 Wire Cloth Mfg.
+3257 Chain Mfg.—Formed or Welded
+3257 Fence Mfg.—Wire
+3257 Wire Fence Mfg.
+3257 Wire Goods Mfg. NOC
+3270 Eyelet Mfg.
+3270 Nail Mfg.
+3270 Pin Mfg.
+3270 Razor Mfg.—Safety
+3270 Tack Mfg.
+3300 Bedspring or Wire Mattress Mfg.
+3300 Wire Mattress or Bedspring Mfg.
+3303 Spring Mfg.
+3307 Heat Treating—Metal.
+3315 Brass or Copper Goods Mfg.
+3315 Copper or Brass Goods Mfg.
+3315 Explosives or Ammunition Mfg.—Cartridge or Shell Case Mfg.—Metal
+3334 Tinfoil Mfg.
+3336 Castings Mfg.—Metal—Lost Wax Process
+3336 Type Foundry
+3365 Welding or Cutting NOC & Drivers.
+3372 Detinning.
+3372 Electroplating.
+3372 Metal Finishing
+3373 Galvanizing or Tinning—Not Electrolytic.
+3373 Tinning or Galvanizing—Not Electrolytic.
+3383 Gold Leaf Mfg.
+3383 Jewelry Mfg.
+3383 Musical Instrument Mfg.—Metal NOC
+3383 Silverware Mfg.
+3383 Watchcase Mfg.
+3385 Clock Mfg.
+3385 Watch Mfg.
+3400 Automobile—Stamped Parts Mfg.
+3400 Barrel or Drum Mfg.—Metal.
+3400 Metal Stamped Goods Mfg. NOC
+3400 Metal Stamping Mfg. NOC
+3507 Agricultural or Construction Machinery Mfg.
+3507 Construction or Agricultural Machinery Mfg.
+3507 Cotton Gin Machine Mfg.
+3507 Dredge, Steam Shovel, or Construction Machinery Mfg. NOC
+3507 Locomotive Works
+3507 Mining or Ore Milling Machinery Mfg.
+3507 Ore Milling or Mining Machinery Mfg.
+3507 Power Plow or Traction Engine Mfg.
+3507 Road or Street Making Machinery Mfg.
+3507 Safe Mfg. or Repairing
+3507 Steam Shovel, Dredge, or Construction Machinery Mfg. NOC
+3507 Street or Road Making Machinery Mfg.
+3507 Traction Engine or Power Plow Mfg.
+3507 Tractor Mfg.—Caterpillar Type
+3515 Loom Harness or Reed Mfg.
+3515 Reed or Loom Harness Mfg.
+3515 Textile—Machinery Mfg.
+3548 Arms Mfg. NOC
+3548 Bookbinding or Printing Machine Mfg.
+3548 Printing or Bookbinding Machine Mfg.
+3559 Confection Machine Mfg.
+3559 Machine Mfg.—Confection
+3574 Air Pressure or Steam Gauge Mfg.
+3574 Arms Mfg.—Small
+3574 Cash Register Mfg.
+3574 Computing, Recording, or Office Machine Mfg. NOC
+3574 Explosives or Ammunition Mfg.—Cartridge Mfg. or Assembly—Small Arms
+3574 Gas Meter Mfg.
+3574 Sewing Machine Mfg.
+3574 Sewing Machines—Commercial—Repairing and Rebuilding Sewing Machines, Cutters, and Parts in Shop
+3574 Slot Machine Mfg.
+3574 Speedometer or Taximeter Mfg.
+3574 Steam or Air Pressure Gauge Mfg.
+3574 Taximeter or Speedometer Mfg.
+3574 Typewriter Mfg.
+3581 Fuel Injection Device Mfg.
+3612 Engine Mfg. NOC
+3612 Pump Mfg.
+3620 Boilermaking
+3620 Military Tank Hull Mfg. or Assembly.
+3620 Tank Building—Metal—Shop
+3629 Automated Machine Shop NOC
+3632 Machine Shop NOC
+3634 Automatic Sprinkler Head Mfg.
+3634 Sprinkler Head Mfg.
+3634 Valve Mfg.
+3634 Water Meter Mfg.
+3635 Gear Mfg. or Grinding.
+3638 Ball or Roller Bearing Mfg.
+3638 Roller or Ball Bearing Mfg.
+3642 Battery Mfg.—Dry
+3643 Electric Power or Transmission Equipment Mfg.
+3643 Sewing Machines—Commercial—Repairing and Rebuilding Electric Motors
+3647 Battery Mfg.—Storage
+3648 Automotive—Lighting, Ignition, or Starting Apparatus Mfg. NOC
+3681 Electrical Cord Set, Radio, or Ignition Harness Assembly
+3681 Telephone or Telegraph—Apparatus Mfg.
+3681 Television, Radio, Telephone, or Telecommunication Device Mfg. NOC
+3685 Instrument Mfg. NOC.
+3685 Thermometer Mfg.
+3719 Oil Still Erection or Repair
+3724 Door—Installation—Overhead & Drivers
+3724 Electrical Apparatus Installation or Repair & Drivers
+3724 Floodlights—Erection of Temporary Floodlights & Drivers
+3724 Gas or Oil—Burner Installation NOC & Drivers
+3724 Machinery or Equipment Erection or Repair NOC & Drivers.
+3724 Millwright Work NOC & Drivers.
+3724 Oil or Gas—Burner Installation NOC & Drivers
+3724 Pump Installation NOC & Drivers
+3724 Satellite Dish Installation—Applies to Ground or Roof Mounted Installations—Erection of Dish and Auxiliary Equipment & Drivers
+3724 Scales—Installation or Adjustment—Platform or Beam Type & Drivers
+3724 Sewing Machines—Commercial—Repairing, Installing, and Dismantling in Sewing Plants & Drivers
+3724 Tank Installation—Gasoline Service Stations & Drivers
+3726 Boiler—Installation or Repair—Steam
+3726 Boiler—Scaling
+3726 Cleaning Tanks or Tank Cars
+3726 Tank Erection or Repair—Metal—Within Buildings Exclusively
+3803 Automobile—Wheel Mfg.—Metal—Not Cast
+3807 Automobile—Radiator Mfg.
+3807 Radiator Mfg.—Automobile.
+3808 Automobile—Mfg. or Assembly
+3808 Carriage or Wagon Mfg. or Assembly.
+3808 Wagon or Carriage Mfg. or Assembly
+3821 Automobile—Recycling & Drivers
+3822 Automobile, Bus, Truck or Trailer Body Mfg.—Die Pressed Steel
+3824 Automobile, Bus, Truck or Trailer Body Mfg. NOC
+3826 Aircraft Engine Mfg.
+3826 Engine Mfg.—Aircraft
+3827 Automobile—Engine Mfg.
+3827 Engine Mfg.—Automobile
+3830 Airplane Mfg.
+3851 Motorcycle Mfg. or Assembly
+3865 Baby Carriage Mfg.
+3865 Bicycles—Mfg. or Assembly
+3881 Car Mfg.—Railroad & Drivers
+4000 Clay or Shale Digging & Drivers.
+4000 Dredging—For Materials on Non-Navigable Waters & Drivers
+4000 Gravel or Sand Digging & Drivers.
+4000 Sand or Gravel Digging & Drivers.
+4000 Shale or Clay Digging & Drivers.
+4021 Brick or Clay Products Mfg. NOC & Drivers.
+4021 Clay Products or Brick Mfg. NOC & Drivers.
+4021 Earthenware or Tile Mfg. NOC & Drivers.
+4021 Tile or Earthenware Mfg. NOC & Drivers.
+4024 Brick Mfg.—Fire or Enameled & Drivers.
+4024 Refractory Products Mfg. & Drivers.
+4034 Coffin and Casket Mfg. and Installation—Concrete & Drivers
+4034 Concrete Products Mfg. & Drivers
+4036 Plaster or Staff Mixing & Drivers.
+4036 Plasterboard or Plaster Block Mfg. & Drivers.
+4036 Staff or Plaster Mixing & Drivers.
+4038 Dress Form Mfg.
+4038 Ornament or Plaster Statuary Mfg.
+4038 Plaster Statuary or Ornament Mfg.
+4053 Pottery Mfg.—China or Tableware
+4053 Terra-Cotta Mfg.
+4061 Pottery Mfg.—Earthenware—Glazed or Porcelain—Hand Molded or Cast
+4062 Pottery Mfg.—Porcelain Ware—Mechanical Press Forming
+4101 Glass Mfg. & Drivers
+4109 Integrated Circuit Mfg.
+4110 Electric Bulb Mfg.
+4110 Fiber Optic Cable Mfg.
+4111 Glassware Mfg.—No Automatic Blowing Machines
+4113 Glass Mfg.—Cut
+4114 Glassware Mfg. NOC
+4130 Glass Merchant
+4131 Mirror Mfg.
+4133 Cathedral or Art Glass Window Mfg.
+4133 Glass Window Mfg.—Stained
+4149 Optical Goods Mfg. NOC
+4206 Pulp Mfg.—Ground Wood Process
+4207 Pulp Mfg.—Chemical Process
+4239 Paper Mfg.
+4239 Particleboard Mfg.
+4240 Box Mfg.—Set-Up Paper
+4243 Box Mfg.—Folding Paper—NOC
+4244 Corrugated or Fiberboard Container Mfg.
+4250 Paper
+4250 Paper Coating
+4251 Carbon Paper or Typewriter Ribbon Mfg.
+4251 Inked Ribbon Preparation.
+4251 Loose-Leaf Ledger or Notebook Mfg.
+4251 Notebook or Loose-Leaf Ledger Mfg.
+4251 Stationery Mfg.
+4251 Typewriter Ribbon or Carbon Paper Mfg.
+4263 Fiber Goods Mfg.
+4273 Bag
+4273 Plastic or Paper Bag Mfg.
+4279 Match Mfg.
+4279 Paper Goods Mfg. NOC
+4279 Wallpaper Mfg.
+4282 Boot or Shoe Pattern Mfg.
+4282 Dress Pattern Mfg.—Paper
+4282 Music Roll Mfg.—Perforated Paper.
+4282 Shoe or Boot Pattern Mfg.
+4283 Building or Roofing Paper or Felt Preparation—No Installation.
+4283 Felt or Building or Roofing Paper Preparation—No Installation.
+4283 Roofing or Building Paper or Felt Preparation—No Installation
+4283 Roofing—Paper or Roofing Felt Mfg.
+4299 Electrotyping.
+4299 Lithographing.
+4299 Playing Cards Mfg.
+4299 Printing.
+4299 Rubber Stamp Mfg. or Assembly
+4299 Sign Manufacturing—Plastic or Vinyl Computer-Generated Letters or Graphics—No Painting or Using Power Machinery
+4299 Sign Manufacturing—Silk Screen Printing—Paper or Posterboard
+4299 Sign Manufacturing—Silk Screen Printing—Plastic
+4299 Sign Manufacturing—Silk Screen Printing—Wood
+4304 Newspaper Publishing.
+4307 Bookbinding
+4351 Electrotyping
+4352 China Decorating—By Hand
+4352 Engraving
+4360 Duplication and Replication Service of Prerecorded Audio, Video or Data
+4360 Motion Picture—Development of Negatives, Printing, and All Subsequent Operations
+4361 Film Print Shops—All Employees & Clerical, Salespersons, Drivers.
+4361 Photographer—All Employees & Clerical, Salespersons, Drivers.
+4410 Boot or Shoe Mfg.—Rubber
+4410 Rubber Goods Mfg. NOC
+4410 Rubber Reclaiming
+4410 Shoe or Boot Mfg.—Rubber
+4420 Rubber Tire Mfg.
+4431 Magnetic and Optical Recording Media Mfg.
+4431 Phonograph Record Mfg.
+4432 Pen Mfg.
+4432 Pencil Mfg.—Mechanical
+4439 Lacquer or Varnish Manufacturing
+4452 Bone or Ivory Goods Mfg.
+4452 Horn Goods Mfg.—Fabricated Products Mfg.
+4452 Ivory or Bone Goods Mfg.
+4452 Plastics Mfg.—Fabricated Products NOC
+4459 Plastics Mfg.—Sheets, Rods, or Tubes
+4459 Pyroxylin Mfg.
+4470 Cable Mfg.—Insulated Electrical.
+4470 Wire Insulating or Covering
+4484 Button Mfg. NOC
+4484 Doll or Doll Parts Mfg. or Assembly.
+4484 Plastics Mfg.—Laminated Molded Products NOC
+4484 Plastics Mfg.—Molded Products NOC
+4493 Fabric Coating or Impregnating NOC.
+4493 Leather Mfg.—Imitation
+4493 Linoleum Mfg.
+4493 Oil Cloth Mfg.
+4511 Analytical Laboratories or Assaying—Including Laboratory, Outside Employees, Collectors of Samples, & Drivers
+4557 Buffing or Polishing Compounds Mfg.
+4557 Candle Mfg.
+4557 Dressing or Polish Mfg.
+4557 Grease or Oil Mixing or Blending.
+4557 Ink Mfg.
+4557 Mucilage or Paste Mfg.
+4557 Oil or Grease Mixing or Blending.
+4557 Paste or Mucilage Mfg.
+4557 Polish or Dressing Mfg.
+4557 Wax Mfg.
+4557 Wax Products Mfg.
+4558 Color Grinding, Bleeding, or Testing.
+4558 Paint Mfg.
+4558 Paint, Lacquer or Varnish Manufacturing
+4558 Whiting Mfg.
+4568 Borax, Potash, or Salt Producing or Refining & Drivers.
+4568 Potash, Borax, or Salt Producing or Refining & Drivers.
+4568 Salt, Borax, or Potash Producing or Refining & Drivers.
+4581 Phosphate Works & Drivers.
+4583 Fertilizer Mfg. & Drivers
+4586 Ammonium Nitrate Mfg.
+4611 Cosmetics Mfg.
+4611 Drug, Medicine or Pharmaceutical Preparation—Compounding or Blending—No Mfg. of Ingredients
+4611 Medicine, Drug or Pharmaceutical Preparation—No Mfg. of Ingredients
+4611 Pharmaceutical, Drug or Medicine Preparation—No Mfg. of Ingredients
+4635 Acetylene Gas Mfg. & Drivers.
+4635 Carbonic Acid Gas Mfg. & Drivers.
+4635 Hydrogen or Oxygen Mfg. & Drivers.
+4635 Oxygen or Hydrogen Mfg. & Drivers.
+4653 Glue Mfg. & Drivers.
+4665 Rendering Works NOC & Drivers.
+4670 Cottonseed Oil Mfg.—Mechanical & Drivers
+4670 Cottonseed Oil Mfg.—Solvent & Drivers
+4683 Cottonseed Oil Refining
+4683 Lard Refining.
+4683 Oil Mfg.—Vegetable NOC
+4686 Oil Mfg.—Vegetable—Solvent Extraction Process
+4692 Dental Laboratory
+4693 Pharmaceutical or Surgical Goods Mfg. NOC
+4693 Surgical or Pharmaceutical Goods Mfg. NOC
+4703 Corn Products Mfg.
+4703 Dextrine Mfg.
+4703 Starch Mfg.
+4710 Candle Mfg.
+4710 Sealing Wax Mfg.
+4710 Tallow Chandlers
+4710 Wax Mfg.
+4710 Wax Products Mfg.
+4717 Butter Substitute Mfg.
+4720 Soap or Synthetic Detergent Mfg.
+4740 Gasoline Recovery & Drivers.
+4740 Oil Refining—Petroleum & Drivers.
+4741 Asphalt or Tar Distilling or Refining & Drivers.
+4751 Synthetic Rubber Mfg.
+4771 Explosives or Ammunition Mfg. NOC & Drivers
+4777 Blasting Agents—Preparation or Distribution & Drivers.
+4777 Explosives Distributors & Drivers.
+4825 Drug, Medicine or Pharmaceutical Preparation Mfg.—Includes Mfg. of Ingredients
+4825 Essential Oils Mfg. & Distillation
+4825 Extract Mfg.
+4825 Licorice Extract Mfg.
+4825 Medicine, Drug or Pharmaceutical Preparation Mfg. & Incidental Mfg. of Ingredients
+4825 Pharmaceutical, Drug or Medicine Preparation—Mfg. & Incidental Mfg. of Ingredients
+4828 Chemical Blending or Mixing NOC—All Operations & Drivers.
+4829 Acid Mfg.
+4829 Ammonia Mfg.
+4829 Ammonium Nitrate Mfg.
+4829 Chemical Mfg. NOC—All Operations & Drivers—Includes Blending or Mixing.
+4829 Synthetic Rubber Intermediate Mfg.
+4829 Vitriol Mfg.
+4902 Fishing Rod and Tackle Mfg.
+4902 Golf
+4902 Harness or Saddle Mfg.
+4902 Saddle or Harness Mfg.
+4902 Sporting Goods Mfg. NOC
+4902 Whip Mfg.
+4923 Photographic Supplies Mfg.
+5020 Ceiling Installation—Suspended Acoustical Grid Type.
+5022 Fireplace Construction
+5022 Masonry NOC
+5022 Plastering or Stucco Work on Outside of Buildings
+5022 Silo Erection—Masonry or Tile
+5022 Stucco or Plastering Work—On Outside of Buildings
+5022 Wrecking—Building or Structures—Not Marine—All Operations—Masonry Buildings or Structures
+5037 Painting
+5040 Iron or Steel—Erection—Frame Structures
+5040 Iron or Steel—Erection—Iron—Exterior.
+5040 Iron or Steel—Erection—Metal Bridges
+5040 Iron or Steel—Erection—Radio, Television or Water Towers, Smokestacks, or Gasholders
+5057 Concrete or Cement—Distributing Towers—Installation, Repair, or Removal & Drivers
+5057 Iron or Steel—Erection—NOC
+5057 Vault Construction or Installation.
+5057 Wrecking—Building or Structures—Not Marine—All Operations —Iron or Steel Buildings or Structures
+5059 Iron or Steel—Erection—Frame Structures Not Over Two Stories in Height.
+5069 Iron or Steel—Erection—Construction of Dwellings Not Over Two Stories in Height
+5102 Door and Window Installation—All Types—Residential and Commercial
+5102 Iron or Steel—Erection—Steel Frame—Interior—Light-Gauge Steel—By Specialist Contractor
+5146 Fixtures or Furniture Installation—Portable—NOC.
+5146 Furniture or Fixtures Installation—Portable NOC.
+5146 Modular Partition or Workstation Installation
+5146 Partition Installation—Metal
+5160 Elevator—Erection or Repair
+5183 Boiler or Steam Pipe Insulating & Drivers.
+5183 Carrier System—Pneumatic—Installation or Repair & Drivers.
+5183 Gas or Oil—Burner Installation—Domestic & Drivers
+5183 Insulation—Steam Pipe or Boiler & Drivers
+5183 Lawn Sprinkler System Installation—Underground & Drivers
+5183 Oil or Gas—Burner Installation Domestic & Drivers
+5183 Plumbing NOC & Drivers.
+5183 Pump Installation—Domestic & Drivers
+5183 Sewer—Cleaning of Building Connections Using Portable Equipment & Drivers
+5183 Steam Pipe or Boiler Insulating & Drivers
+5188 Automatic Sprinkler Installation & Drivers
+5188 Sprinkler Installation & Drivers
+5190 Cable Installation & Drivers.
+5190 Electrical Wiring—Within Buildings & Drivers.
+5190 Satellite Dish Installation—Applies to Ground or Roof Mounted Installations—Auxiliary Wiring Within Buildings & Drivers
+5190 Sewing Machines—Commercial—Electrical Wiring—Away From Shop & Drivers
+5191 Computer—Device Installation, Inspection, Service, or Repair
+5191 Office Machine Installation, Inspection, Adjustment, or Repair.
+5191 Piano—Tuning—Away From Shop
+5191 Scales—Installation or Adjustment—Counter Type
+5191 X-Ray Equipment—Installation, Service & Repair
+5192 Vending or Coin Operated Machines—Installation, Service or Repair & Route Salespersons, Drivers
+5213 Cleaning or Renovating Building Exteriors
+5213 Concrete Construction NOC
+5213 Concrete Construction—Private Residences—Monolithic
+5213 Guniting—Not Chimneys—All Operations.
+5213 Satellite Dish Installation—Applies to Ground or Roof Mounted Installations—Installation of Concrete Mounting Pad
+5213 Silo Erection—Concrete
+5213 Silo Erection—Precast Concrete Staves
+5213 Wrecking—Building or Structures—Not Marine—All Operations—Concrete or Concrete-Encased Buildings or Structures
+5215 Concrete Construction—Private Residences—Not Monolithic
+5215 Concrete Work—Incidental to the Construction of Private Residence
+5221 Concrete or Cement Work—Floors, Driveways, Yards, or Sidewalks & Drivers
+5221 Monuments—Cemetery—Erection Exclusively & Drivers
+5221 Paving or Repaving Floors, Driveways, Yards, or Sidewalks & Drivers.
+5221 Stone and Brick Paver Installation—Outside
+5222 Chimney Construction—Not Metal.
+5222 Concrete Construction in Connection With Bridges or Culverts
+5222 Smokestack or Chimney Lining—Not Metal
+5223 Swimming Pool Construction, Installation or Repair—Not Iron or Steel—Drivers
+5348 Ceramic Tile, Indoor Stone, Marble, or Mosaic Work
+5402 Greenhouse Erection—All Operations
+5402 Hothouse Erection—All Operations
+5403 Carpentry—Construction of Residential Dwellings Exceeding Three Stories in Height or Commercial Buildings and Structures
+5403 Iron or Steel—Erection—Steel Frame—Interior—Light Gauge Steel—By Other Carpentry Contractors
+5403 Siding Installation—Construction of Residential Dwellings Exceeding Three Stories in Height or Commercial Buildings and Structures
+5437 Carpentry—Installation of Cabinet Work or Interior Trim
+5443 Lathing & Drivers.
+5445 Iron or Steel—Erection—Steel Frame—Interior—Light Gauge Steel—By Contractors Engaged in Wallboard Installation & Drivers
+5445 Sheetrock Installation—Within Buildings & Drivers
+5445 Wallboard Installation—Within Buildings & Drivers
+5462 Glazier—Away From Shop & Drivers
+5472 Asbestos Removal Operations—Contractor—Pipe and Boiler Work Exclusively & Drivers
+5473 Asbestos Removal Operations—Contractor—NOC & Drivers
+5474 Waterproofing—Roofs of Mobile Homes and Single Family Residences & Shop Operations & Drivers
+5478 Floor Covering Installation—Resilient Flooring—Carpet and Laminate Flooring
+5479 Insulation Work NOC & Drivers
+5480 Plastering NOC & Drivers
+5491 Paperhanging & Drivers
+5506 Airport Construction—Paving & Drivers
+5506 Asphalt Works Operated by Road Paving Contractors—Temporary Location & Drivers
+5506 Oiling of Roads & Drivers—Delivery and Spreading of Oil in Conjunction With the Spreading of Sand or Gravel by Oil Distributors
+5506 Street or Road Construction—Paving or Repaving & Drivers
+5507 Street or Road Construction—Subsurface Work & Drivers
+5508 Street or Road Construction—Rock Excavation & Drivers
+5509 Street or Road Maintenance or Beautification & Drivers
+5535 Awning Erection—Metal—Erection of Metal Awnings Exclusively & Drivers
+5535 Metal—Ceiling or Wall Covering Installation & Drivers
+5535 Sheet Metal Work—Installation & Drivers
+5535 Silo Erection—Metal or Glass Fused to Steel & Drivers
+5537 Heating, Ventilation, Air-Conditioning and Refrigeration Systems—Installation, Service and Repair & Drivers
+5551 Roofing—All Kinds & Drivers.
+5606 Contractor—Project Manager, Construction Executive, Construction Manager or Construction Superintendent
+5610 Cleaner—Debris Removal—Construction Contractor
+5613 Cleaner—Debris Removal—Temporary Labor Service
+5645 Carpentry—Construction of Detached One- or Two-Family Dwellings
+5645 Siding Installation—All Types—Detached One- or Two-Family Dwellings
+5651 Carpentry—Construction of Dwellings—Three Stories or Less
+5651 Siding Installation—All Types—Dwellings—Three Stories or Less
+5703 Building Raising or Moving
+5951 Antitoxin, Serum, or Virus Mfg. & Drivers
+5951 Serum, Antitoxin, or Virus Mfg. & Drivers
+5951 Virus, Antitoxin, or Serum Mfg. & Drivers
+6003 Pile Driving
+6003 Wrecking—Marine
+6004 Land Pile Driving
+6005 Jetty or Breakwater Construction—All Operations to Completion & Drivers
+6006F Marine Pile Driving, Dock & Seawall, Jetty or Breakwater, Dike or Revetment Construction—All Operations to Completion & Drivers
+6017 Dam or Lock Construction—Concrete Work—All Operations
+6018 Dam or Lock Construction—Earth Moving or Placing—All Operations & Drivers
+6045 Levee Construction—All Operations to Completion & Drivers
+6204 Drilling NOC & Drivers
+6204 Well Drilling—Water & Drivers
+6206 Oil or Gas—Well—Acidizing—All Employees & Drivers
+6206 Oil or Gas—Well—Cementing & Drivers
+6213 Oil or Gas—Well—Specialty Tool & Equipment Leasing NOC—All Employees & Drivers
+6214 Oil or Gas—Well—Perforating of Casing—All Employees & Drivers
+6216 Oil or Gas—Lease Work NOC—By Specialist Contractor & Drivers
+6217 Airport Construction—Grading & Drivers
+6217 Blasting Rock & Drivers
+6217 Clearing of Right-of-Way—Electric, Power, Telephone, Burglar, or Fire Alarm Lines Brush Clearing or Removal—New or Existing Right-of-Way & Drivers.
+6217 Excavation & Drivers.
+6217 Grading of Land NOC & Drivers.
+6217 Rock Excavation & Drivers.
+6229 Drainage or Irrigation System Construction & Drivers.
+6229 Irrigation or Drainage System Construction & Drivers.
+6229 Septic Tank Installation & Drivers
+6233 Oil or Gas—Pipeline Construction & Drivers
+6235 Drilling or Redrilling of Oil or Gas Wells & Installation of Casing, Drivers
+6235 Oil or Gas—Well—Drilling or Redrilling & Drivers
+6235 Oil or Gas—Well—Shooting & Drivers
+6236 Oil or Gas—Well—Installation or Recovery of Casing & Drivers
+6237 Oil or Gas—Well—Instrument Logging or Survey Work & Drivers
+6251 Tunneling—Not Pneumatic—All Operations
+6252 Caisson Work—All Operations to Completion.
+6252 Cofferdam Work—Not Pneumatic—All Operations to Completion.
+6252 Shaft Sinking—All Operations.
+6260 Tunneling—Pneumatic—All Operations
+6306 Sewer Construction—All Operations & Drivers
+6319 Gas Main or Connection Construction & Drivers
+6319 Steam Mains or Connections Construction & Drivers
+6319 Water Main or Connection Construction & Drivers.
+6325 Conduit Construction—For Cables or Wires & Drivers
+6400 Fence Installation and Repair—Metal, Vinyl, Wood, or Prefabricated Concrete Panel Fence Installed by Hand
+6503 Potato Chip, Popcorn & Snack Chip Mfg. NOC
+6504 Food Products Mfg. NOC
+6702 Railroad Construction—All Operations Including Clerical, Salespersons & Drivers—Coverage Under the Federal Employers’ Liability Act (FELA)—Program I
+6703 Railroad Construction—All Operations Including Clerical, Salespersons & Drivers—Coverage Under the Federal Employers’ Liability Act (FELA)—Program II—USL&HW Act Benefits
+6704 Railroad Construction—All Operations Including Clerical, Salespersons & Drivers—Coverage Under the Federal Employers’ Liability Act (FELA)—Program II—State Act Benefits
+6801F Boatbuilding—Wood NOC & Drivers—Coverage Under U.S. Act
+6811 Boatbuilding—Wood NOC & Drivers—Coverage Under State Act Only
+6824F Boatbuilding or Repair & Drivers—Coverage Under U.S. Act
+6826F Marina & Drivers—Coverage Under U.S. Act
+6826F Marina & Drivers—Coverage Under U.S. Act
+6828F Boatbuilding or Repair—Fiberglass Only & Drivers—Coverage Under U.S. Act
+6834 Boatbuilding or Repair & Drivers—Coverage Under State Act Only
+6836 Marina & Drivers—Coverage Under State Act Only
+6838 Boatbuilding or Repair—Fiberglass Only & Drivers—Coverage Under State Act Only
+6845F Shipbuilding—Naval & Drivers.
+6872F Marine Railway Operation & Drivers—Coverage Under U.S. Act
+6874F Painting—Ship Hulls—Coverage Under U.S. Act
+6882 Marine Railway Operation & Drivers—Coverage Under State Act Only
+6884 Painting—Ship Hulls—Coverage Under State Act Only
+7016 Ferries—Coverage Under Admiralty Law—Program I
+7016 Fishing Vessels NOC—Coverage Under Admiralty Law—Program I
+7016 Oyster Boats—Coverage Under Admiralty Law—Program I
+7016 Supply Boats—Coverage Under Admiralty Law—Program I
+7016 Tugboats—Coverage Under Admiralty Law—Program I
+7016 Vessels NOC—Coverage Under Admiralty Law—Program I
+7024 Ferries—Coverage Under Admiralty Law—Program II—State Act Benefits
+7024 Fishing Vessels NOC—Coverage Under Admiralty Law—Program II—State Act Benefits
+7024 Oyster Boats—Coverage Under Admiralty Law—Program II—State Act Benefits
+7024 Supply Boats—Coverage Under Admiralty Law—Program II—State Act Benefits
+7024 Tugboats—Coverage Under Admiralty Law—Program II—State Act Benefits
+7024 Vessels NOC—Coverage Under Admiralty Law—Program II—State Act Benefits
+7038 Vessels—Sail—Coverage Under Admiralty Law—Program I
+7038 Yachts—Private—Sail or Power—Coverage Under Admiralty Law—Program I
+7046 Vessels—Not Self-Propelled—Coverage Under Admiralty Law—Program I
+7047 Ferries—Coverage Under Admiralty Law—Program II—USL&HW Act Benefits
+7047 Fishing Vessels NOC—Coverage Under Admiralty Law—Program II—USL&HW Act Benefits
+7047 Oyster Boats—Coverage Under Admiralty Law—Program II—USL&HW Act Benefits
+7047 Supply Boats—Coverage Under Admiralty Law—Program II—USL&HW Act Benefits
+7047 Tugboats—Coverage Under Admiralty Law—Program II—USL&HW Act Benefits
+7047 Vessels NOC—Coverage Under Admiralty Law—Program II—USL&HW Act Benefits
+7050 Vessels—Sail—Coverage Under Admiralty Law—Program II—USL&HW Act Benefits
+7050 Yachts—Private—Sail or Power—Coverage Under Admiralty Law—Program II—USL&HW Act Benefits
+7090 Vessels—Sail—Coverage Under Admiralty Law—Program II—State Act Benefits
+7090 Yachts—Private—Sail or Power—Coverage Under Admiralty Law—Program II—State Act Benefits
+7098 Vessels—Not Self-Propelled—Coverage Under Admiralty Law—Program II—State Act Benefits
+7099 Vessels—Not Self-Propelled—Coverage Under Admiralty Law—Program II—USL&HW Act Benefits
+7151 Railroad Operation—All Employees Including Drivers—Coverage Under the Federal Employers’ Liability Act (FELA)—Program I
+7152 Railroad Operation—All Employees Including Drivers—Coverage Under the Federal Employers’ Liability Act (FELA)—Program II—USL&HW Act Benefits
+7153 Railroad Operation—All Employees Including Drivers—Coverage Under the Federal Employers’ Liability Act (FELA)—Program II—State Act Benefits
+7201 Dog Show—Kennel Employees
+7201 Horse Show—Stable Hands
+7201 Livery or Boarding Stable—Not Sales Stable & Drivers
+7201 Racetrack Operation—Horse or Dog—Stable Hands or Kennel Employees & Drivers
+7204 Greyhound Breeding, Training and Racing & Drivers
+7205 Horse Training
+7219 Automobile
+7219 Mobile Home Delivery by Specialist Contractor—Delivery Only—All Employees & Drivers
+7219 Scaffolding—Delivery of Materials Only—No Installation, Repair or Removal—All Employees & Drivers
+7219 Snow Removal—Hauling Snow Under Contract—No Snow Clearing—All Employees & Drivers
+7219 Trucking NOC—All Employees & Drivers
+7219 Trucking—Hauling Explosives or Ammunition—All Employees & Drivers
+7228 Automobile
+7228 Snow Removal—Hauling Snow Under Contract—Local Hauling Only—No Snow Clearing—All Employees & Drivers
+7229 Automobile
+7229 Snow Removal—Hauling Snow Under Contract—Long Distance Hauling—No Snow Clearing—All Employees & Drivers
+7231 Mail, Parcel, or Package Delivery and Courier or Messenger Service Companies —All Employees & Drivers
+7313F Coal Dock Operation & Stevedoring
+7313F Ore Dock Operation & Stevedoring.
+7317F Automobile—Haulaway or Driveaway—Driving Autos on or off Vessels & Drivers
+7333 Dredging—All Types—Coverage Under Admiralty Law—Program I
+7335 Dredging—All Types—Coverage Under Admiralty Law—Program II—State Act Benefits
+7337 Dredging—All Types—Coverage Under Admiralty Law—Program II—USL&HW Act Benefits
+7360 Refrigerator Car Loading or Unloading
+7370 Limousine Co.—All Other Employees & Drivers—Nonscheduled
+7370 Taxicab Co.—All Other Employees & Drivers
+7380 Distributing Companies & Drivers.
+7380 Drivers, Chauffeurs, Messengers, and Their Helpers NOC—Commercial
+7382 Bus Co.—All Other Employees & Drivers
+7382 Limousine Co.—All Other Employees & Drivers—Scheduled
+7383 College or School—School Bus Drivers
+7390 Ale or Beer Dealer—Wholesale & Drivers.
+7390 Beer or Ale Dealer—Wholesale & Drivers
+7394 Diving—Marine—Coverage Under Admiralty Law—Program I
+7394 Wrecking—Marine—Coverage Under Admiralty Law—Program I
+7395 Diving—Marine—Coverage Under Admiralty Law—Program II—State Act Benefits
+7395 Wrecking—Marine—Coverage Under Admiralty Law—Program II—State Act Benefits
+7398 Diving—Marine—Coverage Under Admiralty Law—Program II—USL&HW Act Benefits
+7398 Wrecking—Marine—Coverage Under Admiralty Law—Program II—USL&HW Act Benefits
+7402 Aviation—Air Traffic Controllers Under Contract With the FAA
+7403 Aviation—Airport or Heliport Operator—All Employees & Drivers
+7403 Aviation—All Other Employees & Drivers
+7403 Aviation—Patrol, Photography, Mapping, or Survey Work—All Other Employees & Drivers
+7403 Aviation—Transportation of Personnel in Conduct of Employer’s Business—Ground Crew & Drivers
+7405 Aviation—Air Carrier—Scheduled, Commuter, or Supplemental—Flying Crew
+7420 Aviation—Aerial Application, Seeding, Herding, or Scintillometer Surveying—Flying Crew
+7420 Aviation—Aerial Firefighting—Flying Crew
+7420 Aviation—Stunt Flying, Racing, or Parachute Jumping—Flying Crew
+7421 Aviation—Transportation of Personnel in Conduct of Employer’s Business—Flying Crew
+7422 Aviation—Flight Testing—Flying Crew
+7422 Aviation—NOC—Other Than Helicopters—Flying Crew
+7422 Aviation—Patrol, Photography, Mapping, or Survey Work—Flying Crew
+7422 Aviation—Sales or Service Agency or Student Instruction—Flying Crew
+7425 Aviation—Helicopters—Flying Crew
+7431 Aviation—Air Charter or Air Taxi—Flying Crew
+7502 Gas Co.—Natural Gas—Local Distribution & Drivers
+7502 Gas Distributing—Liquefied Petroleum Gas—Local & Drivers
+7502 Gas Works & Drivers
+7515 Oil or Gas—Pipeline Operation & Drivers
+7520 Waterworks Operation & Drivers.
+7538 Electric Light or Power Line Construction & Drivers
+7538 Floodlighting of Stadiums, Parks & Drivers
+7539 Electric Light or Power Co. NOC—All Employees & Drivers
+7539 Steam Heating or Power Co.—All Employees & Drivers
+7540 Electric Light or Power Cooperative—REA Project Only—All Employees & Drivers
+7580 Sewage Disposal Plant Operation & Drivers
+7590 Garbage Works
+7600 Telecommunications Co.—Cable TV, or Satellite—All Other Employees & Drivers
+7605 Burglar and Fire Alarm Installation or Repair & Drivers
+7610 Duplication and Replication Service of Prerecorded Audio, Video or Data
+7610 Motion Picture—Production—In Studios or Outside—All Operations Including the Development of Negatives, Printing, and All Subsequent Operations & Clerical, Drivers
+7704 Fire Patrol or Protective Corps & Drivers.
+7704 Firefighters & Drivers
+7704 Protective Corps or Fire Patrol & Drivers.
+7705 Ambulance Service Companies and EMS (Emergency Medical Service) Providers & Drivers
+7710 Fire Patrol or Protective Corps & Drivers—No Salvage Operations
+7710 Firefighters & Drivers
+7710 Forest or Wildland Firefighting & Drivers
+7711 Fire Patrol or Protective Corps & Drivers—Volunteer
+7711 Firefighters & Drivers—Volunteer
+7711 Forest or Wildland Firefighting & Drivers—Volunteer
+7720 Detective or Patrol Agency & Drivers
+7720 Juvenile Detention Center—All Employees & Salespersons, Drivers
+7720 Patrol or Detective Agency & Drivers
+7720 Police Officers & Drivers
+7720 Security Enforcement or Protection—Contract & Drivers
+8001 Florist.
+8001 Store—Florist & Drivers.
+8002 Automobile—Rental Co.—All Other Employees & Counter Personnel, Drivers
+8002 Truck—Rental—All Other Employees & Counter Personnel, Drivers
+8006 Gasoline Station—Self-Service and Grocery—Retail
+8006 Store—Grocery—Retail
+8008 Store—Clothing, Wearing Apparel, or Dry Goods—Retail
+8008 Store—Dry Goods—Retail
+8008 Store—Shoe—Retail
+8010 Bicycles—Retail Sale or Rental
+8010 Locksmith—Shop and Outside
+8010 Store—Agriculture Implement—Not Farm Machinery.
+8010 Store—Audio or Video Parts And Accessories
+8010 Store—Hardware.
+8010 Store—Ship Chandler.
+8013 Diamond Cutting or Polishing.
+8013 Optical Stores
+8013 Precious Stone Setting.
+8013 Store—Hearing Aid
+8013 Store—Jewelry.
+8015 Quick Printing—Copying or Duplicating Service—All Employees & Clerical, Salespersons, Drivers.
+8017 Auctioneers.
+8017 Beer or Ale Dealer—Retail
+8017 Hat Cleaning
+8017 Laundry—Self-Service
+8017 Pawn Shop
+8017 Shoe Repair Store.
+8017 Shoe Shining Establishment
+8017 Store—Five and Ten Cent
+8017 Store—Floor Covering—Retail
+8017 Store—Luggage—Retail
+8017 Store—Paint or Wallpaper—Retail
+8017 Store—Pet and Pet Supply—Retail
+8017 Store—Retail NOC
+8017 Store—Sporting Goods—Retail
+8017 Tailor Shop.
+8018 Barber or Beauty Parlor Supply House
+8018 Egg Dealer—Wholesale.
+8018 Mill Supply Dealer
+8018 Packaging—Contract
+8018 Sawdust Dealer
+8018 Soft Drink Distributors—Wholesale.
+8018 Store—Floor Covering—Wholesale
+8018 Store—Fruit or Vegetable—Wholesale
+8018 Store—Grocery—Wholesale
+8018 Store—Paint or Wallpaper—Wholesale
+8018 Store—Pet and Pet Supply—Wholesale
+8018 Store—Vegetable or Fruit—Wholesale
+8018 Store—Wholesale—NOC
+8018 Welding Supply Dealer
+8021 Store—Fish, Meat or Poultry Dealer—Wholesale.
+8021 Store—Meat, Fish or Poultry Dealer—Wholesale.
+8031 Cold Storage Locker—Frozen Foods.
+8031 Store—Fish, Meat or Poultry—Retail
+8031 Store—Meat, Fish or Poultry—Retail
+8032 Store—Clothing, Wearing Apparel, or Dry Goods—Wholesale
+8032 Store—Dry Goods—Wholesale
+8032 Store—Shoe—Wholesale
+8033 Store—Meat, Grocery and Provision—Combined—Retail NOC.
+8033 Store—Supermarket.
+8037 Store—Superstores and Warehouse Clubs
+8039 Store—Department—Retail.
+8044 Furniture Rental—Chairs, Coat Racks, Dishes & Drivers
+8044 Store—Furniture & Drivers.
+8044 Store—Household Appliance—Electrical & Drivers
+8044 Store—Piano or Organ & Drivers
+8045 Store—Drug—Retail.
+8046 Automobile
+8046 Store—Automobile Parts and Accessories NOC & Drivers.
+8047 Store—Drug—Wholesale
+8058 Building Material Dealer—New Materials Only—Store Employees
+8058 Home Improvement Center—New Materials Only—Store Employees
+8058 Lumberyard—New Materials Only—Store Employees
+8061 Gasoline Station—Self-Service and Convenience—Retail
+8061 Store—Convenience—Retail
+8072 Store—Audio or Video Cassette, Book, Record, Compact Disc, Software—Retail.
+8072 Store—Book, Record, Compact Disc, Software, Video or Audio Cassette—Retail.
+8072 Store—Compact Disc, Book, Record, Software, Video or Audio Cassette—Retail.
+8072 Store—Record, Book, Compact Disc, Software, Video or Audio Cassette—Retail.
+8072 Store—Software, Book, Record, Compact Disc, Video or Audio Cassette—Retail.
+8072 Store—Video or Audio Cassette, Book, Record, Compact Disc, Software—Retail.
+8102 Bean Sorting or Handling
+8102 Peanut Handling.
+8102 Seed Merchant.
+8103 Clippings Dealer.
+8103 Cotton Merchant
+8103 Cotton Storage
+8103 Wiping Cloth Dealer & Laundry Operations
+8103 Wool Merchant
+8105 Store—Hide or Leather Dealer
+8105 Store—Leather or Hide Dealer
+8106 Concrete Reinforcing Rod or Bar Dealer & Drivers
+8106 Iron or Steel—Merchant & Drivers.
+8106 Oil Well Drilling Rigs—Warehousing and Sales & Drivers
+8106 Steel or Iron Merchant & Drivers
+8107 Contractors Equipment Rental & Drivers
+8107 Contractors Machinery Dealer & Drivers
+8107 Machinery Dealer NOC—Store or Yard & Drivers.
+8107 Oil or Gas—Well—Supplies or Equipment Dealer—New—Store or Yard Only & Drivers
+8111 Plumbers’ Supplies Dealer & Drivers
+8116 Farm Machinery Dealer—All Operations & Drivers
+8203 Ice Mfg. or Distribution & Drivers
+8204 Building Material—Yard & Local Managers, Drivers
+8204 Oil or Gas—Well—Supplies or Equipment Dealer—Used & Local Managers, Drivers
+8209 Vegetable Packing & Drivers.
+8215 Feed, Fertilizer, Hay, or Grain Dealer & Local Managers, Drivers—No Mfg.
+8215 Fertilizer Dealer & Local Manager, Drivers—No Mfg.
+8215 Grain, Feed, Fertilizer or Hay Dealer & Local Managers, Drivers—No Mfg
+8215 Hay, Grain, Feed, or Fertilizer Dealer & Local Managers, Drivers—No Mfg.
+8227 Concrete Forms—Reconditioning and Leasing
+8227 Construction or Erection Permanent Yard
+8232 Concrete—Ready-Mix Dealer & Yard Employees, Drivers
+8233 Coal Merchant & Local Managers, Drivers
+8235 Sash, Door, or Assembled Millwork—Dealer & Drivers
+8263 JUNK DEALER & DRIVERS
+8264 Bottle Dealer—Used & Drivers.
+8264 Container Recycling—Bottle or Can & Drivers
+8264 Paper Stock or Rag Dealer—Used & Drivers
+8264 Rag or Paper Stock Dealer—Used & Drivers.
+8264 Rubber Stock Dealer—Used & Drivers
+8265 Iron or Steel—Scrap Dealer & Drivers.
+8265 Steel or Iron Scrap Dealer & Drivers
+8273 Horse Farm—Breeding Involving Stallions & Drivers
+8274 Horse Farm—Breeding Not Involving Stallions & Drivers
+8279 Breeding Farm or Stable & Drivers.
+8279 Club—Riding & Drivers
+8279 Dog Show—Kennel Employees & Drivers
+8279 Horse Show—Stable Employees & Drivers
+8279 Livery or Boarding Stable—Not Sales Stable & Drivers
+8279 Racetrack Operation—Horse or Dog—Stable Hands or Kennel Employees & Drivers
+8279 Riding Academy or Club & Drivers
+8279 Stable or Breeding Farm & Drivers.
+8288 Cattle Dealer & Salespersons, Drivers.
+8288 Feed Lots—Cattle & Salespersons, Drivers.
+8288 Livestock Dealer or Commission Merchant & Salespersons, Drivers
+8288 Livestock Sales Co. & Salespersons, Drivers
+8288 Sales Stable & Salespersons, Drivers
+8288 Stockyard—Salespersons, Drivers
+8291 Storage Warehouse—Cold
+8291 Warehousing—Cold Storage
+8292 Storage Warehouse NOC
+8292 Warehousing NOC
+8293 Furniture Moving & Storage, Drivers
+8293 Storage Warehouse—Furniture & Drivers
+8293 Warehousing—Furniture & Drivers
+8304 Grain Elevator Operation & Local Managers, Drivers.
+8350 Gas Dealer—Liquefied Petroleum Gas & Drivers
+8350 Gasoline or Oil Dealer & Drivers.
+8350 Oil or Gasoline Dealer & Drivers.
+8350 Oiling of Roads & Drivers—Delivery and Spreading of Oil on Roads by Oil Distributors
+8350 Solvent Dealers—Bulk & Drivers
+8353 Gas Dealer—Liquefied Petroleum Gas & Salespersons, Drivers
+8380 Air Conditioning Systems—Automobile—Installation, Service or Repair & Drivers
+8380 Automobile
+8380 Gasoline Station NOC—Retail & Drivers
+8380 Mobile, Manufactured, Modular, or Prefabricated Home Dealers—All Other Employees & Drivers
+8380 Rubber Tire Dealer—Retail & Drivers
+8380 Storage Battery Service Station & Drivers..
+8380 Truck Leasing—Long-Term—All Other Employees & Drivers
+8381 Gasoline Station—Retail—Self-Service
+8385 Ambulance Service Companies—Garage Employees
+8385 Automobile—Rental Co.—Garage Employees
+8385 Bus Co.—Garage Employees
+8385 Limousine Co.—Garage Employees
+8385 Taxicab Co.—Garage Employees
+8385 Truck—Rental—Garage Employees
+8392 Automobile Storage Garage, Parking Lot or Parking Station, Valet Service, Cashiers or Counter Personnel & Drivers
+8393 Automobile—Bumper Repair
+8500 METAL SCRAP DEALER & DRIVERS
+8601 Architectural or Engineering Firm—Including Salespersons & Drivers
+8602 Oil or Gas Geologists or Scouts & Drivers
+8602 Surveyors & Drivers
+8602 Timber Cruisers & Drivers
+8603 Architectural or Engineering Firm—Clerical
+8603 Drafting Company—Clerical
+8606 Geophysical Exploration—All Employees & Drivers
+8709F Steamship Line or Agency—Port Employees—Talliers, Checking Clerks, and Employees Engaged in Mending or Repacking of Damaged Containers—Coverage Under U.S. Act
+8719 Steamship Line or Agency—Port Employees—Talliers, Checking Clerks, and Employees Engaged in Mending or Repacking of Damaged Containers—Coverage Under State Act Only
+8720 Inspection of Risks for Insurance or Evaluation Purposes NOC
+8721 Real Estate Agency—Outside Employees & Collectors
+8721 Real Estate Appraisal Company—Outside Employees
+8723 Insurance Companies—Including Clerical & Salespersons
+8725 Inventory Counters—Traveling—Including Salespersons & Clerical
+8726F Steamship Line or Agency—Port Employees—Superintendents, Captains, Engineers, Stewards or Their Assistants, Pay Clerks
+8728 Insurance—Outside Claim Adjusters
+8734 Salespersons or Collectors—Outside—Program II—State Act Benefits—Coverage Under the Federal Employers’ Liability Act (FELA)
+8737 Salespersons or Collectors—Outside—Program I—Coverage Under the Federal Employers’ Liability Act (FELA)
+8738 Salespersons or Collectors—Outside—Program II—USL&HW Act Benefits—Coverage Under the Federal Employers’ Liability Act (FELA)
+8742 Salespersons or Collectors—Outside
+8742 U.S.O. Operations—Travelers Aid Society
+8745 News Agent or Distributor of Magazines or Other Periodicals—Not Retail Dealer & Salespersons, Drivers
+8748 Automobile
+8748 Mobile, Manufactured, Modular, or Prefabricated Home Dealers—Salespersons
+8748 Truck Leasing—Long-Term—Sales Employees
+8755 Labor Union—All Employees.
+8799 Mailing or Addressing Company or Letter Service Shop—Clerical Staff
+8800 Mailing or Addressing Company or Letter Service Shop
+8803 Auditor, Accountant, or Computer System Designer or Programmer—Traveling
+8805 Clerical Office Employees NOC—Coverage Under the Federal Employers’ Liability Act (FELA)—Program II—State Act Benefits
+8810 Clerical Office Employees NOC.
+8810 Computer—System Designers or Programmers—Exclusively Office
+8810 Public Library or Museum—Professional Employees & Clerical
+8810 Racetrack Operation—Horse or Dog—Pari-Mutuel Clerks, Cashiers, and Clerical Office Employees
+8814 Clerical Office Employees NOC—Coverage Under the Federal Employers’ Liability Act (FELA)—Program I
+8815 Clerical Office Employees NOC—Coverage Under the Federal Employers’ Liability Act (FELA)—Program II—USL&HW Act Benefits
+8820 Attorney—All Employees & Clerical, Messengers, Drivers.
+8820 Law Office—All Employees & Clerical, Messengers, Drivers.
+8824 Retirement Living Centers—Health Care Employees
+8825 Retirement Living Centers—Food Service Employees
+8826 Retirement Living Centers—All Other Employees & Salespersons, Drivers
+8829 Convalescent Home—All Employees
+8831 Artificial Insemination of Cattle—Professional Employees
+8831 Hospital—Veterinary & Drivers
+8831 Pet Grooming or Training & Drivers
+8832 Dentist & Clerical.
+8832 Physician & Clerical
+8833 Asylum—Professional Employees
+8833 Hospital—Professional Employees
+8833 Sanitarium—Professional Employees
+8835 Home, Public, and Traveling Healthcare—All Employees
+8835 Homemaker Service—Physical Assistance
+8842 Group Homes—All Employees & Salespersons, Drivers
+8855 Banks and Trust Companies—All Employees, Salespersons, Drivers & Clerical
+8856 Check Cashing Establishments—All Employees, Salespersons, Drivers & Clerical
+8864 Social Services Organization—All Employees & Salespersons, Drivers
+8868 College or School—Professional Employees & Clerical
+8869 Child Care Center—All Employees Including Clerical, Salespersons & Drivers.
+8869 Child Day Camp—All Employees Including Clerical, Salespersons & Drivers
+8869 Day Nurseries—All Employees Including Clerical, Salespersons & Drivers
+8871 Clerical Telecommuter Employees.
+8901 Telecommunications Co.: Office or Exchange Employees & Clerical
+9012 Building or Property Management—Property Managers and Leasing Agents & Clerical, Salespersons
+9012 Condominiums, Cooperatives or Time-Shares—Property Managers and Leasing Agents & Clerical, Salespersons
+9012 Mini-Storage Facilities or Flea Markets—Property Managers and Leasing Agents & Clerical, Salespersons
+9012 Mobile Home or Trailer Parks—Property Managers and Leasing Agents & Clerical, Salespersons
+9014 Exterminator & Termite Control, Drivers
+9015 Bathhouse—Beach
+9015 Building or Property Management—All Other Employees
+9015 Camp Operation NOC
+9015 Condominiums, Cooperatives or Time-Shares—All Other Employees
+9015 Mini-Storage Facilities or Flea Markets—All Other Employees
+9015 Mobile Home or Trailer Parks—All Other Employees
+9015 Mobile Home Windstorm Tie-Down Installation—By Mobile Home Park Operator
+9015 Recreational Vehicle Campgrounds or Parks—All Other Employees
+9015 Swimming Pool—Public Operation—All Other Employees
+9016 Amusement Park or Exhibition Operation & Drivers
+9016 Caves or Caverns—Operation for Exhibition Purposes & Drivers.
+9016 Dog Show—Operation by Owner or Lessee & Drivers
+9016 Horse Show—Operation by Owner or Lessee & Drivers
+9016 Ice-Skating Rink Operation & Drivers.
+9016 Racetrack Operation—Horse or Dog—All Other Employees Including Starters and Their Assistants, Drivers
+9019 Bridge or Vehicular Tunnel Operation & Drivers.
+9019 Tunnel—Vehicular—or Bridge Operations & Drivers.
+9033 Housing Authority & Clerical, Salespersons, Drivers
+9040 Asylum—All Other Employees
+9040 Hospital—All Other Employees
+9040 Sanitarium—All Other Employees
+9044 Casino Gambling—Hotel—All Employees & Clerical, Salespersons, Drivers
+9052 Commissary Work—All Other Employees & Salespersons, Drivers
+9052 Hotel—All Other Employees & Salespersons, Drivers
+9052 Motel, Motor Court, Tourist Court, or Cabin—All Other Employees & Salespersons, Drivers
+9052 Rooming Houses or Boarding Houses & Salespersons, Drivers
+9058 Commissary Work—Restaurant Employees
+9058 Hotel—Restaurant Employees
+9058 Motel, Motor Court, Tourist Court, or Cabin—Restaurant Employees
+9060 Club—Country, Golf, Fishing, or Yacht—All Employees & Clerical, Salespersons, Drivers
+9061 Club—NOC & Clerical
+9061 Fraternity or Sorority Houses & Clerical
+9061 Sorority or Fraternity Houses & Clerical
+9062 Casino Gambling—All Employees & Clerical, Salespersons, Drivers
+9063 Exercise or Health Institute & Clerical
+9063 Health or Exercise Institute & Clerical
+9063 Health Spa or Steam Bath NOC & Clerical
+9063 U.S.O. Operations—Permanent Location
+9063 YMCA, YWCA, YMHA, or YWHA, Institution—All Employees & Clerical
+9077F United States Armed Service Risk—All Employees & Drivers.
+9082 Caterer.
+9082 Restaurant NOC.
+9083 Doughnut Shop—Retail.
+9083 Restaurant: Fast Food.
+9084 Bar, Discotheque, Lounge, Nightclub or Tavern.
+9088 Rocket or Missile Testing or Launching & Drivers
+9089 Billiard—Hall
+9093 Bowling Lane.
+9093 Roller-Skating Rink Operation.
+9101 College or School—All Other Employees
+9102 Lawn Maintenance—Commercial or Domestic & Drivers
+9154 Theater NOC—All Other Employees
+9154 Theater—Drive-In—All Employees
+9156 Theater NOC—Players, Entertainers, or Musicians
+9170 Chimney Cleaning—Residential—Includes Chimney Cleaning Above Ground Level & Drivers
+9170 Janitorial Services by Contractors—Includes Window Cleaning Above Ground Level & Drivers
+9170 Mobile Power or Pressure Cleaning Services—Includes Power or Pressure Cleaning Above Ground Level & Drivers.
+9178 Athletic Sports or Park: Noncontact Sports.
+9179 Athletic Sports or Park: Contact Sports
+9180 Amusement Device Operation NOC Not Traveling & Drivers
+9180 Club—Shooting & Drivers
+9180 Fireworks
+9180 Shooting Gallery & Drivers
+9182 Athletic Sports or Park: Operations & Drivers.
+9186 Amusement Device Operator, Carnival, or Circus Traveling—All Employees & Drivers
+9186 Carnival, Circus, or Amusement Device Operator—Traveling—All Employees & Drivers
+9186 Circus, Carnival, or Amusement Device Operator—Traveling—All Employees & Drivers
+9220 Cemetery Operation & Drivers
+9402 Sewer Cleaning & Drivers
+9402 Snow Removal—Clearing Snow From Streets or Roads & Drivers
+9402 Street Cleaning & Drivers
+9403 Ashes, Garbage, or Refuse Collection & Drivers.
+9403 Garbage, Ashes or Refuse Collection & Drivers
+9403 Refuse, Ashes, or Garbage Collection & Drivers.
+9410 Municipal, Township, County, or State Employee NOC.
+9501 Sign Manufacturing—Wood—Painting, Spraying, Sandblasting With or Without Power Machinery & Drivers
+9505 Automobile, Bus, Truck or Trailer Body Mfg.—Painting
+9505 Painting—Automobile or Carriage Bodies
+9516 Electronic Equipment—Installation, Service, or Repair—Shop and Outside & Drivers
+9519 Air Conditioning Systems—Portable Units—Installation, Service or Repair & Drivers
+9519 Household and Commercial Appliances—Electrical—Installation, Service or Repair & Drivers
+9521 Advertising Display Installation Service
+9521 Draperies or Curtains—Installation in Public Buildings From Floor or Stepladders
+9521 House Furnishings Installation NOC & Upholstering.
+9521 Sign Installation, Maintenance, Repair, Removal, or Replacement Service
+9522 Automobile, Bus, Truck or Trailer Body Mfg.—Upholstering
+9522 Burial Garment Mfg. and Casket or Coffin Upholstering
+9522 Casket or Coffin Upholstering and Burial Garment Mfg.
+9522 Coffin and Casket Upholstering and Burial Garment Mfg.
+9522 Furniture Upholstering
+9522 Upholstering.
+9534 Bell Installation—Tower & Drivers
+9534 Mobile Crane and Hoisting Service Contractors—NOC—All Operations & Drivers.
+9554 Sign Installation, Maintenance, Repair, Removal, or Replacement NOC—Away From Shop & Drivers
+9554 Sign Painting or Lettering—Outside of Buildings or Structures & Drivers
+9586 Barber Shop, Beauty Parlor, or Hair Styling Salon
+9586 Beauty Shop, Barber Shop, or Hair Styling Salon
+9586 Hair Styling Salon, Beauty Parlor, or Barber Shop
+9600 Taxidermist
+9620 Crematory Operation & Drivers
+9620 Funeral Director & Drivers
+9620 Undertaker & Drivers
+9984 Atomic Energy—Project Work
+9985 Atomic Energy—Radiation Exposure NOC
+9985 Radiation Exposure NOC.

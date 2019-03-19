@@ -1,0 +1,16 @@
+{
+    "name": "SC",
+    "alias": "sc",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Modules\\SC\\Providers\\SCServiceProvider"
+    ],
+    "aliases": {},
+    "files": [
+        "start.php"
+    ],
+    "requires": []
+}

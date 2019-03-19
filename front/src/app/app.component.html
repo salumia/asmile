@@ -1,0 +1,17 @@
+<!-- Wrapper Start -->
+    <div class="wrapper">
+        <app-header *ngIf="template.loadComponent('header')"></app-header>
+		<main class="main--container" *ngIf="loggedInUser!=null">
+			<section class="main--content">
+				<router-outlet></router-outlet>
+			</section>
+			<app-footer *ngIf="template.loadComponent('footer')" ></app-footer>
+		</main>	
+		<main class="main--container" *ngIf="loggedInUser==null" style="padding-left: 0;">
+			<section class="main--content">
+				<router-outlet></router-outlet>
+			</section>
+			<app-footer *ngIf="template.loadComponent('footer')" ></app-footer>
+		</main>		
+    </div>
+<!-- Wrapper End -->

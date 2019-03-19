@@ -1,0 +1,30 @@
+<div class="container page-template">
+	<div class="row">
+		<div class="col-md-12">
+			<a href="javascript:void(0);" (click)="goBack()" style="display:block; margin-top: 10px;"><i class="fa fa-arrow-left"></i> Go Back</a>
+		</div>
+	</div>
+  <div class="page-title"><h1>{{page.title}}</h1></div>
+  
+  <div class="row" *ngIf="page.cover_image">
+    <div class="col-md-12" *ngIf="page">
+		<img src="{{baseUrl}}/images/{{page.cover_image}}" />
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-12" *ngIf="page" [innerHTML]="page.description">
+    </div>
+  </div>
+  
+  <div class="row documents-box" *ngIf="page.files.length">
+	<h2>Documents</h2>
+    <div class="col-md-12" *ngIf="page">
+		<ul>
+			<li *ngFor="let file of page.files" >
+			<label><a href="{{baseUrl}}/images/{{file.name}}" target="_blank">{{file.original_name}}</a></label>
+			</li>
+		</ul>
+    </div>
+  </div>
+</div>

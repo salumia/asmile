@@ -1,0 +1,5 @@
+.row{width:100%;}
+.ui-fileupload-content,ul{float:left;}
+.uploaded_documents li{width:100%;float:left;}
+p-button{float:right;}
+img{max-width:100%;}

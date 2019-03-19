@@ -1,0 +1,104 @@
+<p-growl [(value)]="msgs" key="top-corner"></p-growl>
+<pages-menubar></pages-menubar>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+        <a routerLink="/pages/list" style="display:block; margin-top: 10px;"><i class="fa fa-arrow-left"></i> Back to Pages</a>
+      </div>
+  </div>
+  <h1><i class="fa fa-address-card"></i> {{title}} Page</h1>
+    <div class="ui-message ui-messages-error ui-corner-all error-box" *ngIf="
+  (!Pageform.controls['title'].valid&&Pageform.controls['title'].dirty) || (!Pageform.controls['type'].valid&&Pageform.controls['type'].dirty) ||
+  (!Pageform.controls['description'].valid&&Pageform.controls['description'].dirty) || (!Pageform.controls['redirect_url'].valid&&Pageform.controls['redirect_url'].dirty)
+  ">
+      <i class="ui-messages-icon fa fa-fw fa-2x fa-close"></i>
+      <span class="ui-messages-summary">Validation Error</span>
+  </div>
+  <div class="row" style="margin-top: 7px;">
+	<form id="Pageform" [formGroup]="Pageform" (ngSubmit)="savePageData(Pageform.value)" class="row">
+    <div class="col-md-6">
+        <p-panel>
+            <p-header>
+                Page Info                
+            </p-header>            
+            <div class="row">
+              <div class="col-md-12">
+                <h5>Title</h5>
+                <input pInputText [(ngModel)]="page.title" formControlName="title" />
+              </div>
+            </div> 
+            <div class="row">
+              <div class="col-md-12">
+                <h5>Select Page Type</h5>
+				<p-dropdown #page_type [options]="page_types" [(ngModel)]="page.type" formControlName="type" placeholder="Select type" (onChange)="changeTemplate(page_type.value)"></p-dropdown>
+              </div>
+            </div> 
+			<ng-container *ngIf="redirectTemplate">
+			<div class="row">
+              <div class="col-md-12">
+                <h5>Redirect Url</h5>
+				<input pInputText [(ngModel)]="page.redirect_url" formControlName="redirect_url" />
+              </div>
+            </div> 
+			</ng-container>
+			<ng-container *ngIf="contentTemplate">
+			<div class="row">
+              <div class="col-md-12">
+                <h5>Description</h5>
+                <p-editor [(ngModel)]="page.description" formControlName="description" [style]="{'height':'220px'}">
+				</p-editor>
+              </div>
+            </div>
+			</ng-container> 			
+            
+        </p-panel>
+    </div>
+    <div class="col-md-6">
+		<ng-container *ngIf="contentTemplate">
+		<div class="col-md-12">
+			<h5>Cover Image</h5>
+			
+			<div class="col-md-12" *ngIf="page.cover_image">
+				<p-button label="Delete Cover Image" icon="fa fa-trash" (click)="deleteCoverImage(page.cover_image)"></p-button>
+				<img src="{{baseUrl}}/images/{{page.cover_image}}" />
+			</div>
+			<p-fileUpload *ngIf="page.cover_image == ''" name="documents[]" url="{{apiUrl}}/upload" (onUpload)="onCoverImageUpload($event)" accept="image/*" maxFileSize="2000000">
+				<ng-template pTemplate="content">
+					<ul *ngIf="tempCoverImage.length">
+						<li *ngFor="let file of tempCoverImage">{{file.name}} - {{file.size}} bytes</li>
+					</ul>
+				</ng-template>        
+			</p-fileUpload>
+		</div>
+		<div class="col-md-12">
+			<h5 *ngIf="page.files.length">Uploaded Documents</h5>
+			<ul *ngIf="page.files.length" class="uploaded_documents">
+				<li *ngFor="let f of page.files">
+					<label>{{f.original_name}}</label>
+					<p-button label="Delete" icon="fa fa-trash" (onClick)="deleteFile(f)"></p-button>
+				</li>
+			</ul>
+		</div>
+		<div class="col-md-12" style="float:left;">
+			<h5>Upload Documents</h5>
+			<p-fileUpload name="documents[]" url="{{apiUrl}}/upload" (onUpload)="onUpload($event)" multiple="multiple" maxFileSize="2000000">
+				<ng-template pTemplate="content">
+					<ul *ngIf="uploadedFiles.length">
+						<li *ngFor="let file of uploadedFiles">{{file.name}} - {{file.size}} bytes</li>
+					</ul>
+				</ng-template>        
+			</p-fileUpload>
+		</div>
+		</ng-container>
+    </div>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="pull-right">
+				<button pButton type="submit" label="Save" icon="fa fa-fw fa-save" [disabled]="!Pageform.valid"></button>
+			</div>
+		</div>
+	</div>
+	</form>
+  </div>
+
+</div>

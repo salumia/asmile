@@ -1,0 +1,6 @@
+.loginPanel {
+  margin-top: 5%;
+}
+#loginMessage .ui-messages-icon {
+  display: none;
+}

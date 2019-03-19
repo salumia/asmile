@@ -1,0 +1,9 @@
+p-menubar, p-breadcrumb {
+  width: 100% !important;
+}
+
+.footer.navbar{
+	margin-bottom:0;
+	margin-top:30px;
+	background:#F0F2F4;
+}

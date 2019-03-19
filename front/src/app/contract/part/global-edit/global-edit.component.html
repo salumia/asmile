@@ -1,0 +1,66 @@
+<p-growl [(value)]="msgs" key="top-corner"></p-growl>
+<div class="row">	
+	<div class="col-lg-12 d-flex justify-content-center" *ngIf="loadSpinner">
+		<p-progressSpinner ></p-progressSpinner>		
+	</div>
+	<div class="col-lg-12"> 
+		<a href="javascript:void(0);" (click)="goBack()"><i class="fa fa-arrow-left"></i> Go Back</a>
+	</div>
+</div>
+<div class="panel">
+	<div class="records--body">
+		<div class="title">
+			<div class="col-lg-6"> 
+				<!-- Page Title Start -->
+				<h2 class="page--title h5"><i class="fa fa-industry"></i> Global Part</h2>
+				<!-- Page Title End -->
+			</div>
+			<div class="col-lg-6"> 
+				<!-- Page Title Start -->
+				<h2 class="page--title h5 text-right"  *ngIf="id > 0">ID: {{ id }}</h2>
+				<!-- Page Title End -->
+			</div>
+		</div>
+		
+			<div class="tab-pane fade show active" id="tab01">
+				<form id="partform" [formGroup]="partform" *ngIf="!loadSpinner" (ngSubmit)="savePart()" >
+					<input type="hidden" name="type" id="type"  [(ngModel)]="part.type" formControlName="type" />
+					<div class="form-group row">
+						<span class="label-text col-md-3 col-form-label">Select Industry: *</span>
+
+						<div class="col-md-9">
+							<p-dropdown [options]="industries" [(ngModel)]="part.industry_id" formControlName="industry_id"></p-dropdown>
+						</div>
+					</div>	
+					<div class="form-group row">
+						<span class="label-text col-md-3 col-form-label">Title: *</span>
+
+						<div class="col-md-9">
+							<input type="text" pInputText class="form-control" name="title" id="title"  [(ngModel)]="part.title" formControlName="title" />
+						</div>
+					</div>					
+					<div class="form-group row">
+						<span class="label-text col-md-3 col-form-label">Internal Title: *</span>
+
+						<div class="col-md-9">
+							<input type="text" pInputText class="form-control" name="internal_title" id="internal_title"  [(ngModel)]="part.internal_title" formControlName="internal_title" />
+						</div>
+					</div>					
+					<div class="form-group row">
+						<span class="label-text col-md-3 col-form-label">Description: *</span>
+
+						<div class="col-md-9">
+							<textarea rows="5" cols="30" class="form-control" pInputTextarea [(ngModel)]="part.body" formControlName="body"></textarea>
+						</div>
+					</div>				
+					<div class="row mt-3">
+						<div class="col-md-9 offset-md-3">
+							<button type="submit" class="btn btn-rounded btn-success" [disabled]="!partform.valid">Save</button>
+							<button type="button" class="btn btn-rounded btn-success" (click)="goBack()">Cancel</button>
+						</div>
+					</div>
+				</form>
+			</div>
+	
+	</div>
+</div>
