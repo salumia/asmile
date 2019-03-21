@@ -196,5 +196,14 @@ export class UserService {
 			}
 		});
 	}
+		
+	getParents() {
+		const token = this.auth.getToken();
+		return this.http.get<User[]>(this.apiUrl + '/listing/parent', {
+			headers: {
+				Authorization: 'Bearer ' + token
+			}
+		});
+	}
 
 }

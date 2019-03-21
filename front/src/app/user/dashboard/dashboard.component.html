@@ -1,8 +1,8 @@
 <div class="row">	
-	
+	<!-- 
 	<div class="col-lg-12"> 
 		<a href="javascript:void(0);" (click)="goBack()"><i class="fa fa-arrow-left"></i> Go Back</a>
-	</div>
+	</div> -->
 	<div class="col-lg-12 d-flex justify-content-center" *ngIf="loadSpinner">
 		<!-- <p-progressSpinner ></p-progressSpinner>		 -->
 	</div>
@@ -13,7 +13,7 @@
 		<div class="title">
 			<div class="col-lg-12"> 
 				<!-- Page Title Start -->
-				<h2 class="page--title h5"><i class="fa fa-bell"></i> Notifications</h2>
+				<h2 class="page--title h5">Dashboard</h2>
 				<!-- Page Title End -->
 			</div>
 		</div>
@@ -22,34 +22,9 @@
 	<div class="app_wrapper row">
 		<!-- App Content Start -->
 		<div class="app_content col-lg-12">
-			
-
-			<div class="todoApp_contentBody">
-				<!-- <ul class="list-unstyled" data-todoapp="items">
-				   
-				<ng-container *ngFor="let notify of notifications">	   
-				<li data-todoapp="item" [ngClass]="{viewed: notify.is_viewed == 1}">
-						<label class="todo--label px-0">
-							<a *ngIf="notify.module=='contract'&&notify.type=='open'" [routerLink]="'/contract/preview/' + notify.ref_id" ><strong>Admin</strong> has changed contract back to open state</a>
-							<a *ngIf="notify.module=='contract'&&notify.type=='sent'" [routerLink]="'/contract/review/' + notify.ref_id" ><strong>{{notify.get_sender_data.name}}</strong> has created contract with you</a>
-							<a *ngIf="notify.module=='contract'&&notify.type=='review'" [routerLink]="'/contract/review/' + notify.ref_id" ><strong>{{notify.get_sender_data.name}}</strong> has sent back contract for review</a>
-							<a *ngIf="notify.module=='contract'&&notify.type=='accept'" [routerLink]="'/contract/preview/' + notify.ref_id" ><strong>{{notify.get_sender_data.name}}</strong> has accepted contract</a>
-							<a *ngIf="notify.module=='contract'&&notify.type=='reject'" [routerLink]="'/contract/preview/' + notify.ref_id" ><strong>{{notify.get_sender_data.name}}</strong> has rejected contract</a>
-						</label>
-						
-						<div class="todo--extras d-inline-flex">
-							<i class="fa fa-eye" *ngIf="notify.is_viewed == 0"></i>
-							<i class="fa fa-eye-slash" *ngIf="notify.is_viewed == 1"></i>
-							<span class="tag tag-backend">{{notify.module}}</span>
-							<span class="todo--date">{{notify.created_at | date: longDate }}</span>
-						</div>
-					</li>
-					</ng-container>
-
-				   
-
-					
-				</ul> -->
+			<div class="todoApp_contentBody text-center" *ngIf="loggedInUser.role == 'student'">
+				<h3>Go to Download extension and use it</h3>
+				<a href="javascript:void(0)" class="btn btn-rounded btn-warning">Download</a>
 			</div>
 		</div>
 		<!-- App Content End -->

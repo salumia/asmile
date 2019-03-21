@@ -64,7 +64,7 @@ export class StudentListComponent implements OnInit {
 	}
 
 	doPasswordChange() {
-		this.userService.changePassword(this.selectedUser.id, this.myPassword, this.newPassword, 'vendor').subscribe(res => {
+		this.userService.changePassword(this.selectedUser.id, this.myPassword, this.newPassword).subscribe(res => {
 			// Clear fields
 			this.myPassword = '';
 			this.newPassword = '';

@@ -16,6 +16,7 @@ export class AdminLoginComponent implements OnInit {
   public username: string;
   public password: string;
   public msgs: Message[];
+  processing: boolean = false;
   @Output() onFilter: any = new EventEmitter();
   constructor(private auth: AuthService, private router: Router, private templateService: TemplateConfigService) { }
 
@@ -27,9 +28,11 @@ export class AdminLoginComponent implements OnInit {
   }
 
   doAuth() {
+	  this.processing = true;
     let auth: Auth = new Auth(this.username, this.password);
 
     this.auth.loginAdmin(auth).subscribe(res => {
+		this.processing = false;
       if(res instanceof HttpErrorResponse) {
         this.updateMessage('Login Failed:', res.error.message);
         this.clearForm();

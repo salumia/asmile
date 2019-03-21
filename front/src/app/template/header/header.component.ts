@@ -43,17 +43,17 @@ export class HeaderComponent implements OnInit {
   
   setSettingMenus(){
 		if(this.items.length == 0){
-			if(this.userData.role == "vendor"){
-				this.items.push({label: 'Profile', icon: 'fa-user', routerLink: '/vendor/view/'+this.userData.id});
-				this.items.push({label: 'Edit Profile', icon: 'fa-pencil', routerLink: '/vendor/edit/'+this.userData.id});
-				this.items.push({label: 'Change Password', icon: 'fa-lock', routerLink: '/vendor/change-password'});
+			if(this.userData.role == "teacher"){
+				this.items.push({label: 'Profile', icon: 'fa-user', routerLink: '/teacher/view/'+this.userData.id});
+				this.items.push({label: 'Edit Profile', icon: 'fa-pencil', routerLink: '/teacher/edit/'+this.userData.id});
+				this.items.push({label: 'Change Password', icon: 'fa-lock', routerLink: '/user/change-password'});
 			} else if(this.userData.role == "admin"){
 				this.items.push({label: 'Profile', icon: 'fa-user', routerLink: '/admin/view/'+this.userData.id});
 				this.items.push({label: 'Edit Profile', icon: 'fa-pencil', routerLink: '/admin/edit/'+this.userData.id});
 				this.items.push({label: 'Change Password', icon: 'fa-lock', routerLink: '/admin/change-password'});
-			} else {
-				this.items.push({label: 'Profile', icon: 'fa-user', routerLink: '/users/view/'+this.userData.id});
-				this.items.push({label: 'Edit Profile', icon: 'fa-pencil', routerLink: '/users/edit/'+this.userData.id});
+			} else if(this.userData.role == "student"){
+				this.items.push({label: 'Profile', icon: 'fa-user', routerLink: '/student/view/'+this.userData.id});
+				this.items.push({label: 'Edit Profile', icon: 'fa-pencil', routerLink: '/student/edit/'+this.userData.id});
 				this.items.push({label: 'Change Password', icon: 'fa-lock', routerLink: '/user/change-password'});
 			}
 			

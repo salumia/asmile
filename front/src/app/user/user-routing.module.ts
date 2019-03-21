@@ -19,6 +19,10 @@ import { StudentEditComponent } from './student/student-edit/student-edit.compon
 import { StudentListComponent } from './student/student-list/student-list.component';
 import { StudentViewComponent } from './student/student-view/student-view.component';
 
+import { ParentEditComponent } from './parent/parent-edit/parent-edit.component';
+import { ParentListComponent } from './parent/parent-list/parent-list.component';
+import { ParentViewComponent } from './parent/parent-view/parent-view.component';
+
 const routes: Routes = [
   {path: 'settings/users', component: UserListComponent},
   {path: 'users', component: UserListComponent},
@@ -43,7 +47,12 @@ const routes: Routes = [
   {path: 'students', component: StudentListComponent},
   {path: 'student/create', component: StudentEditComponent},
   {path: 'student/edit/:id', component: StudentEditComponent},
-  {path: 'student/view/:id', component: StudentViewComponent},  
+  {path: 'student/view/:id', component: StudentViewComponent},    
+  
+  {path: 'parents', component: ParentListComponent},
+  {path: 'parent/create', component: ParentEditComponent},
+  {path: 'parent/edit/:id', component: ParentEditComponent},
+  {path: 'parent/view/:id', component: ParentViewComponent},  
   
 ];
 

@@ -16,6 +16,7 @@ export class LoginComponent implements OnInit {
   public username:string;
   public password:string;
   public msgs: Message[];
+  processing: boolean = false;
   @Output() onFilter: any = new EventEmitter();
   constructor(private auth: AuthService, private router: Router, private templateService: TemplateConfigService) { }
 
@@ -27,9 +28,11 @@ export class LoginComponent implements OnInit {
   }
 
   doAuth() {
+	  this.processing = true;
     let auth: Auth = new Auth(this.username, this.password);
 
     this.auth.login(auth).subscribe(res => {
+		this.processing = false;
       console.log(res);
       if(res instanceof HttpErrorResponse) {
         this.updateMessage('Login Failed:', res.error.message);
@@ -37,8 +40,7 @@ export class LoginComponent implements OnInit {
       } else if(res instanceof AuthData) {
 		this.templateService.filter('header refresh');
         this.router.navigateByUrl('/dashboard');
-		location.reload();
-		//window.location.href = "http://trigvent.com/portfolio/clerk/";			
+		location.reload();		
       } else {
         this.updateMessage('Login Failed:', 'An unknown error occurred');
         this.clearForm();

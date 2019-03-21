@@ -1,0 +1,72 @@
+<p-growl [(value)]="msgs" key="top-corner"></p-growl>
+<div class="container">
+  <div class="row">	
+	<div class="col-lg-6"> 
+		<!-- Page Title Start -->
+		<h2 class="page--title h5"><i class="fa fa-user"></i> Subjects</h2>
+		<!-- Page Title End -->
+	</div>
+	<div class="col-lg-6 text-right">
+		<a [routerLink]="'/subject/create'" class="btn btn-rounded btn-warning">Create Subject</a>
+	</div>    
+	<div class="col-lg-12 d-flex justify-content-center" *ngIf="loadSpinner"> 
+		<p-progressSpinner ></p-progressSpinner>		
+	</div>
+	<div class="table-responsive">	
+    <p-table #subjectListing [columns]="cols" [value]="subjects" [paginator]="true" [rows]="10" [rowsPerPageOptions]="[10,25,50]" paginatorPosition="both" *ngIf="subjects.length > 0">	
+		<ng-template pTemplate="header" let-columns>
+			
+			<tr class="custom-white">
+				<th colspan="2">				
+					<input type="text" class="global-search" pInputText placeholder="Search" (input)="subjectListing.filterGlobal($event.target.value, 'contains')" style="width:50%; margin-right:2%; ">
+					
+					<p-dropdown [style]="{'width':'20%','margin-right':'2%'}" [options]="statuses" (onChange)="subjectListing.filter($event.value, 'status', 'equals')"></p-dropdown>
+				</th>
+				
+				<th class="recordsPerPageTitle">
+					Records to Display:
+				</th>
+			</tr>
+			
+			<tr>       
+				<ng-container *ngFor="let col of columns">
+					<th width="200" [pSortableColumn]="col.field" *ngIf="col.header != ''" >
+						{{col.header}}
+						<p-sortIcon [field]="col.field" ariaLabel="Activate to sort" ariaLabelDesc="Activate to sort in descending order" ariaLabelAsc="Activate to sort in ascending order"></p-sortIcon>
+					</th>
+				</ng-container>
+				<th width="200">Actions</th>
+			</tr>
+        </ng-template>
+		
+		
+      <ng-template pTemplate="body" let-subject>
+        <tr>
+          <td>{{ subject.name }}</td>
+          <td>
+			<span *ngIf="subject.status == 0">
+              Disabled
+            </span> 
+			<span *ngIf="subject.status == 1">
+              Enabled
+            </span>
+		  </td>
+          <td>
+			<span *ngIf="subject.status == 0">
+              <a title="Enable" class='btn bg-success listing-actions' (click)="enableSubject(subject.id)"><i class="fa fa-check"></i></a>
+            </span> 
+			<span *ngIf="subject.status == 1">
+              <a title="Disable" class='btn bg-danger listing-actions' (click)="disableSubject(subject.id)" ><i class="fa fa-close"></i></a>
+            </span> 
+			
+			<a title="Edit" class='btn bg-primary listing-actions' [routerLink]="'/subject/edit/' + subject.id" ><i class="fa fa-pencil-square-o"></i></a>
+			
+			<a title="Delete" class='btn bg-danger listing-actions' (click)="deleteSubject(subject.id)" ><i class="fa fa-trash"></i></a>
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+	</div>
+  </div>
+</div>
+<p-confirmDialog header="Confirmation" icon="pi pi-exclamation-triangle"></p-confirmDialog>

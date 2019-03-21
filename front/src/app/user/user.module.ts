@@ -43,6 +43,10 @@ import { StudentEditComponent } from './student/student-edit/student-edit.compon
 import { StudentListComponent } from './student/student-list/student-list.component';
 import { StudentViewComponent } from './student/student-view/student-view.component';
 
+import { ParentEditComponent } from './parent/parent-edit/parent-edit.component';
+import { ParentListComponent } from './parent/parent-list/parent-list.component';
+import { ParentViewComponent } from './parent/parent-view/parent-view.component';
+
 @NgModule({
   imports: [
     Ng4GeoautocompleteModule.forRoot(),
@@ -70,7 +74,7 @@ import { StudentViewComponent } from './student/student-view/student-view.compon
 	ConfirmDialogModule
   ],
   providers: [AuthService, UserService, ConfirmationService],
-  declarations: [UserListComponent, UserEditComponent, DashboardComponent, ChangePasswordComponent, ViewComponent, AdminViewComponent, AdminEditComponent, TeacherEditComponent, TeacherListComponent, TeacherViewComponent, StudentEditComponent, StudentListComponent, StudentViewComponent]
+  declarations: [UserListComponent, UserEditComponent, DashboardComponent, ChangePasswordComponent, ViewComponent, AdminViewComponent, AdminEditComponent, TeacherEditComponent, TeacherListComponent, TeacherViewComponent, StudentEditComponent, StudentListComponent, StudentViewComponent, ParentEditComponent, ParentListComponent, ParentViewComponent]
 })
 export class UserModule {
   constructor(auth: AuthService, router: Router) {

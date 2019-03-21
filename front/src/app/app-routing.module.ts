@@ -5,7 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'vendor-login',
+    redirectTo: 'login',
     pathMatch: 'full'
   }
 ];

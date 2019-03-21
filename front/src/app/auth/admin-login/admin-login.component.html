@@ -16,7 +16,13 @@
 	  </div>
 
 	  <p-footer>
-		<div class="text-right"> <!-- <a style="color:#1F89CE;" href="#" routerLink="/forgot-password">Forgot Password</a> --> <p-button type="submit" label="Login"></p-button></div>
+		<div class="text-right"> <!-- <a style="color:#1F89CE;" href="#" routerLink="/forgot-password">Forgot Password</a> --> <p-button type="submit" label="Login" 
+		[disabled]="processing" ></p-button></div>
+		
+		<ng-container *ngIf="processing">
+		<h3>Processing...</h3>
+		<p-progressBar mode="indeterminate" [style]="{'height': '10px'}"></p-progressBar>
+		</ng-container>
 	  </p-footer>
 	</p-panel>
 	</div>

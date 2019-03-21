@@ -17,6 +17,7 @@ import { MessagesModule } from 'primeng/messages';
 import { MessageModule } from 'primeng/message';
 
 import { InputMaskModule } from 'primeng/inputmask';
+import {ProgressBarModule} from 'primeng/progressbar';
 
 @NgModule({
   imports: [
@@ -29,7 +30,8 @@ import { InputMaskModule } from 'primeng/inputmask';
 	InputTextModule,
 	MessagesModule,
 	MessageModule,
-	InputMaskModule
+	InputMaskModule,
+	ProgressBarModule
   ],
   declarations: [LoginComponent, AdminLoginComponent, ForgotPasswordComponent,LogoutComponent]
 })

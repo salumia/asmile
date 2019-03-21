@@ -6938,3 +6938,7 @@ textarea.form-control{
 	width:100% !important;
 }
 .logo img{ width: 60px;}
+.ui-progressbar.ui-progressbar-indeterminate{
+	background:#f5f5f5 !important;
+	border-bottom:5px solid #186BA0 !important;
+}

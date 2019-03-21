@@ -83,6 +83,19 @@
 						</a>
 					</li>
 					
+					<li class="active">
+						<a routerLink="/parents" *ngIf="userData.role == 'admin'">
+							<i class="fa fa-group"></i>
+							<span>Manage Parents</span>
+						</a>
+					</li>
+					<li class="active">
+						<a routerLink="/subjects" *ngIf="userData.role == 'admin'">
+							<i class="fa fa-group"></i>
+							<span>Manage Subjects</span>
+						</a>
+					</li>
+					
 					<!-- <li *ngIf="userData.role == 'admin'">
 						<a routerLink="/contract-list">
 							<i class="fa fa-group"></i>
