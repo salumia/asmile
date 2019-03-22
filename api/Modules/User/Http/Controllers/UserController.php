@@ -10,11 +10,14 @@ use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Hash;
 
 use Modules\User\Entities\EmployeeFiles;
+use Modules\User\Entities\TeacherStudents;
 use Modules\Contact\Entities\Contact;
 use Modules\Contract\Entities\Contract;
 
 class UserController extends Controller
 {
+	private $user;
+	private $query;
     //<editor-fold desc="CRUD Operations">
     /**
      *  *** LIST ***
@@ -22,10 +25,20 @@ class UserController extends Controller
      *
      * @return Response
      */
-    public function listing($role)
-    {		
-        $data = User::where([['role','=',$role]])->get();
-        return new Response($data);
+    public function listing($role, Request $request)
+    {	
+		$input = $request->post();
+		if($input['role'] == 'admin'){
+			$response = User::where([['role','=',$role]])->get();
+		} else {
+			$response = [];
+			$data = TeacherStudents::where([['teacher_id','=',$input['id']]])->get();
+			foreach($data as $item){
+				$item->getStudentData;
+				$response[] = $item->getStudentData;
+			}
+		}       
+        return new Response($response);
     } 
 	
 	//<editor-fold desc="CRUD Operations">
@@ -331,4 +344,28 @@ class UserController extends Controller
         }
 		
 	}	
+	
+    public function createStudentTeacherLink(Request $request)
+    {
+        $data = $request->post();
+        $student = TeacherStudents::create($data);
+		
+        return new Response([
+            'message' => 'Student linked successfully',
+            'data' => $student
+        ]);
+    }
+	
+	public function suggestionList($id,$query) {
+		$this->user = $id;
+		$this->query = $query;
+		
+		$users = User::select('email as label', 'id as value')
+				->whereNotIn('id',function($query){
+					   $query->select('student_id')->from('teacher_students')->where('teacher_id',$this->user);
+					})
+				->where([['email',"like",'%'.$this->query.'%'],['role','=','student']])
+				->get();
+		return new Response($users);
+    }
 }

@@ -39,14 +39,13 @@ export class ParentListComponent implements OnInit {
             { label: 'Disabled', value: 'disabled' }
         ];
 		  
-		this.loadUsers();
 		this.loggedInUser = this.authService.getAuth();
+		this.loadUsers();
 	}
 
 	loadUsers() {
-		this.userService.getParents().subscribe(res => {				
-				this.users = res;
-				this.loadSpinner = false;
+		this.userService.getParents(this.loggedInUser.id).subscribe(res => {		 this.users = res;
+				 this.loadSpinner = false;
 			}		
 		);
 	}

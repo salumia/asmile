@@ -168,9 +168,9 @@ export class UserService {
 		});
 	  }
 	  
-	getTeachers() {
+	getTeachers(id:number,role:string = 'admin') {
 		const token = this.auth.getToken();
-		return this.http.get<User[]>(this.apiUrl + '/listing/teacher', {
+		return this.http.post<User[]>(this.apiUrl + '/listing/teacher',{'id':id,'role':role}, {
 			headers: {
 				Authorization: 'Bearer ' + token
 			}
@@ -188,22 +188,42 @@ export class UserService {
 		});
 	}
 	
-	getStudents() {
+	getStudents(id:number,role:string = 'admin') {
 		const token = this.auth.getToken();
-		return this.http.get<User[]>(this.apiUrl + '/listing/student', {
+		return this.http.post<User[]>(this.apiUrl + '/listing/student',{'id':id,'role':role}, {
 			headers: {
 				Authorization: 'Bearer ' + token
 			}
 		});
 	}
 		
-	getParents() {
+	getParents(id:number,role:string = 'admin') {
 		const token = this.auth.getToken();
-		return this.http.get<User[]>(this.apiUrl + '/listing/parent', {
+		return this.http.post<User[]>(this.apiUrl + '/listing/parent',{'id':id,'role':role}, {
 			headers: {
 				Authorization: 'Bearer ' + token
 			}
 		});
 	}
+	
+	createLink(id: number, student_id: number) {
+		const token = this.auth.getToken();		
+		return this.http.post<any>(this.apiUrl + '/create_link', { teacher_id:id, student_id:student_id}, {
+			headers: {
+				Authorization: 'Bearer ' + token
+			}
+		});
+	
+	 }
+	 
+	 
+	searchStudentSuggestion(id:number,query:string = 'a'){
+		const token = this.auth.getToken();
+		return this.http.get<any>(this.apiUrl + '/student/suggestion/'+id+'/'+query ,{
+		  headers: {
+			Authorization: 'Bearer ' + token
+		  }
+		});
+	} 
 
 }

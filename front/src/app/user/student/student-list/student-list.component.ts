@@ -37,15 +37,16 @@ export class StudentListComponent implements OnInit {
             { label: 'Enabled', value: 'user' },
             { label: 'Disabled', value: 'disabled' }
         ];
-		  
-		this.loadUsers();
+		  		
 		this.loggedInUser = this.authService.getAuth();
+		this.loadUsers();
 	}
 
 	
 	loadUsers() {
 		console.log("students");
-		this.userService.getStudents().subscribe(res => {				
+		
+		this.userService.getStudents(this.loggedInUser.id, this.loggedInUser.role).subscribe(res => {				
 				this.users = res;
 				this.loadSpinner = false;
 			}		

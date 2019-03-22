@@ -29,6 +29,7 @@ import { AdminEditComponent } from './admin-edit/admin-edit.component';
 import { ConfirmDialogModule} from 'primeng/confirmdialog';
 
 import {ConfirmationService} from 'primeng/api';
+import {AutoCompleteModule} from 'primeng/autocomplete';
 
 
 import { UserListComponent } from './user-list/user-list.component';
@@ -46,6 +47,7 @@ import { StudentViewComponent } from './student/student-view/student-view.compon
 import { ParentEditComponent } from './parent/parent-edit/parent-edit.component';
 import { ParentListComponent } from './parent/parent-list/parent-list.component';
 import { ParentViewComponent } from './parent/parent-view/parent-view.component';
+import { StudentAddComponent } from './student/student-add/student-add.component';
 
 @NgModule({
   imports: [
@@ -71,10 +73,11 @@ import { ParentViewComponent } from './parent/parent-view/parent-view.component'
 	GrowlModule,
 	ProgressSpinnerModule,
 	TabViewModule,
-	ConfirmDialogModule
+	ConfirmDialogModule,
+	AutoCompleteModule
   ],
   providers: [AuthService, UserService, ConfirmationService],
-  declarations: [UserListComponent, UserEditComponent, DashboardComponent, ChangePasswordComponent, ViewComponent, AdminViewComponent, AdminEditComponent, TeacherEditComponent, TeacherListComponent, TeacherViewComponent, StudentEditComponent, StudentListComponent, StudentViewComponent, ParentEditComponent, ParentListComponent, ParentViewComponent]
+  declarations: [UserListComponent, UserEditComponent, DashboardComponent, ChangePasswordComponent, ViewComponent, AdminViewComponent, AdminEditComponent, TeacherEditComponent, TeacherListComponent, TeacherViewComponent, StudentEditComponent, StudentListComponent, StudentViewComponent, ParentEditComponent, ParentListComponent, ParentViewComponent, StudentAddComponent]
 })
 export class UserModule {
   constructor(auth: AuthService, router: Router) {

@@ -39,12 +39,12 @@ export class TeacherListComponent implements OnInit {
             { label: 'Disabled', value: 'disabled' }
         ];
 		  
-		this.loadUsers();
 		this.loggedInUser = this.authService.getAuth();
+		this.loadUsers();
 	}
 
 	loadUsers() {
-		this.userService.getTeachers().subscribe(res => {				
+		this.userService.getTeachers(this.loggedInUser.id).subscribe(res => {				
 				this.users = res;
 				this.loadSpinner = false;
 			}		
