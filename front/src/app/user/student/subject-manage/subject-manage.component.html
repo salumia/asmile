@@ -1,0 +1,179 @@
+<p-growl [(value)]="msgs" key="top-corner"></p-growl>
+<div class="row">
+	<div class="col-lg-12"> 
+		<a href="javascript:void(0);" (click)="goBack()"><i class="fa fa-arrow-left"></i> Go Back</a>
+	</div>
+	<div class="col-lg-12 d-flex justify-content-center" *ngIf="loadSpinner">
+		<p-progressSpinner ></p-progressSpinner>		
+	</div>	
+</div>
+<div class="panel">
+	<div class="records--body" *ngIf="!loadSpinner">
+		<div class="title">
+			<div class="col-lg-6"> 
+				<!-- Page Title Start -->
+				<h2 class="page--title h5"><i class="fa fa-user"></i> Manage {{user?.name}} Subjects</h2>
+				<!-- Page Title End -->
+			</div>
+			<div class="col-lg-6"> 
+				<!-- Page Title Start -->
+				<h2 class="page--title h5 text-right"  *ngIf="id > 0">ID: {{ id }}</h2>
+				<!-- Page Title End -->
+			</div>
+		</div>
+		
+		<div class="tab-pane fade show active" id="tab01">
+			<div class="row">
+			  <div class="col-md-4">
+				<h5>Name</h5>
+			  </div>
+			  <div class="col-md-8">
+				<label>{{ user?.name }}</label>
+			  </div>
+			</div>
+			
+			<div class="row">
+			  <div class="col-md-4">
+				<h5>Contact Email</h5>
+			  </div>
+			  <div class="col-md-8">
+				<label>{{ user?.email }}</label>
+			  </div>
+			</div>
+			<div class="row">
+			  <div class="col-md-4">
+				<h5>Username</h5>
+			  </div>
+			  <div class="col-md-8">
+				<label>{{ user?.username }}</label>
+			  </div>
+			</div>
+			<div class="row">
+			  <div class="col-md-4">
+				<h5>Phone</h5>
+			  </div>
+			  <div class="col-md-8">
+				<label>{{ user?.phone }}</label>
+			  </div>
+			</div>
+			<div class="row">
+			  <div class="col-md-4">
+				<h5>Address</h5>
+			  </div>
+			  <div class="col-md-8">
+				<label>{{ user?.address }}</label>
+			  </div>
+			</div>
+			<div class="row">
+			  <div class="col-md-4">
+				<h5>City</h5>
+			  </div>
+			  <div class="col-md-8">
+				<label>{{ user?.city }}</label>
+			  </div>
+			</div>
+			<div class="row">
+			  <div class="col-md-4">
+				<h5>Zip</h5>
+			  </div>
+			  <div class="col-md-8">
+				<label>{{ user?.zip }}</label>
+			  </div>
+			</div>		
+		</div>
+		
+		<div class="row manage-subjects-box">
+			<div class="col-lg-6"> 
+				<!-- Page Title Start -->
+				<h2 class="page--title h5">Enrolled Subjects</h2>
+				<!-- Page Title End -->
+			</div>
+			<div class="col-lg-6 text-right"> 
+				<a (click)="showAddContactDialog()" class="btn btn-rounded btn-warning">Add New Subject</a>
+			</div>
+		</div>
+		
+		<div class="table-responsive">
+    <p-table #userListing [columns]="cols" [value]="enrolledSubjects" [paginator]="true" [rows]="10" [rowsPerPageOptions]="[10,25,50]" paginatorPosition="both" *ngIf="enrolledSubjects?.length > 0">
+		
+		<ng-template pTemplate="header" let-columns>			
+			<tr class="custom-white">
+				<th *ngIf="loggedInUser.role == 'parent'">				
+					<input type="text" class="global-search" pInputText placeholder="Search" (input)="userListing.filterGlobal($event.target.value, 'contains')" style="width:50%; margin-right:2%; ">
+					
+					<p-dropdown [style]="{'width':'20%','margin-right':'2%'}" [options]="statuses" (onChange)="userListing.filter($event.value, 'get_subject_data.status', 'equals')"></p-dropdown>
+					
+				</th>
+				<th colspan="2" *ngIf="loggedInUser.role != 'parent'">				
+					<input type="text" class="global-search" pInputText placeholder="Search" (input)="userListing.filterGlobal($event.target.value, 'contains')" style="width:50%; margin-right:2%; ">
+					
+					<p-dropdown [style]="{'width':'20%','margin-right':'2%'}" [options]="statuses" (onChange)="userListing.filter($event.value, 'get_subject_data.status', 'equals')"></p-dropdown>
+					
+				</th>
+				<th class="recordsPerPageTitle">
+					Records to Display:
+				</th>
+			</tr>
+			<tr>       
+				<ng-container *ngFor="let col of columns">
+					<th width="200" [pSortableColumn]="col.field" *ngIf="col.header != ''" >
+						{{col.header}}
+						<p-sortIcon [field]="col.field" ariaLabel="Activate to sort" ariaLabelDesc="Activate to sort in descending order" ariaLabelAsc="Activate to sort in ascending order"></p-sortIcon>
+					</th>
+				</ng-container>
+				<th width="400" *ngIf="loggedInUser.role != 'parent'">Actions</th>
+			</tr>
+        </ng-template>
+		
+		
+      <ng-template pTemplate="body" let-subject>
+        <tr>
+          <td>{{ subject.get_subject_data.name }}</td>
+		  <td>
+		    <span *ngIf="subject.get_subject_data.status == 0">
+              Disabled
+            </span> 
+			<span *ngIf="subject.get_subject_data.status == 1">
+              Enabled
+            </span>
+		  </td>
+          <td *ngIf="loggedInUser.role == 'admin'">
+			<a title="Delete" (click)="removeSubject(subject.get_subject_data.id)" class='btn bg-danger listing-actions'><i class="fa fa-trash"></i></a>		
+          </td>
+		  <td *ngIf="loggedInUser.role == 'teacher'">
+			<a title="Delete" (click)="removeSubject(subject.get_subject_data.id)" class='btn bg-danger listing-actions' *ngIf="subject.assigned_by == loggedInUser.id"><i class="fa fa-trash"></i></a>
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+	</div>
+	</div>
+</div>
+
+
+<p-dialog header="Enroll New Subject" [(visible)]="addContactVisible" [modal]="true" [responsive]="true" [style]="{width: '600px', minWidth: '200px'}" [minY]="70" [baseZIndex]="10000">
+	<form id="Searchform" [formGroup]="Searchform" *ngIf="!loadSpinner" (ngSubmit)="addSearchSubject()">
+ 	<div class="panel" style="width:400px;box-shadow:unset;">	
+	    <!-- <p-messages [(value)]="msgs"></p-messages> -->
+		<div class="row">
+		  <div class="col-md-12">
+			<p-autoComplete [(ngModel)]="selectedSubject" [suggestions]="suggestions" formControlName="subject" [style]="{width: '100%'}" (completeMethod)="searchContact($event)" (onSelect)="onSelectContact($event)" placeholder="Type here to search subjects" [minLength]="1">
+				<ng-template let-subject pTemplate="item">
+					{{subject.label}}
+				</ng-template>
+			</p-autoComplete>
+		  </div>
+		</div>	
+		<div class="row" style="margin-top:10px;">
+		  <div class="col-md-4 text-right">
+		  </div>
+		  <div class="col-md-8">
+			<button type="submit" class="btn btn-rounded btn-success" [disabled]="subject_id == 0">Add</button>
+			
+		  </div>
+		</div>
+	</div>
+	</form>
+</p-dialog>
+
+<p-confirmDialog header="Confirmation" icon="pi pi-exclamation-triangle"></p-confirmDialog>

@@ -3,11 +3,12 @@
   <div class="row">	
 	<div class="col-lg-6"> 
 		<!-- Page Title Start -->
-		<h2 class="page--title h5"><i class="fa fa-user"></i> Subjects</h2>
+		<h2 class="page--title h5" *ngIf="loggedInUser.role == 'admin'"><i class="fa fa-user"></i> Subjects</h2>
+		<h2 class="page--title h5" *ngIf="loggedInUser.role != 'admin'"><i class="fa fa-user"></i> Available Subjects</h2>
 		<!-- Page Title End -->
 	</div>
-	<div class="col-lg-6 text-right">
-		<a [routerLink]="'/subject/create'" class="btn btn-rounded btn-warning">Create Subject</a>
+	<div class="col-lg-6 text-right" >
+		<a [routerLink]="'/subject/create'" class="btn btn-rounded btn-warning" *ngIf="loggedInUser.role == 'admin'">Create Subject</a>
 	</div>    
 	<div class="col-lg-12 d-flex justify-content-center" *ngIf="loadSpinner"> 
 		<p-progressSpinner ></p-progressSpinner>		
@@ -17,7 +18,12 @@
 		<ng-template pTemplate="header" let-columns>
 			
 			<tr class="custom-white">
-				<th colspan="2">				
+				<th colspan="2" *ngIf="loggedInUser.role == 'admin'">	
+					<input type="text" class="global-search" pInputText placeholder="Search" (input)="subjectListing.filterGlobal($event.target.value, 'contains')" style="width:50%; margin-right:2%; ">
+					
+					<p-dropdown [style]="{'width':'20%','margin-right':'2%'}" [options]="statuses" (onChange)="subjectListing.filter($event.value, 'status', 'equals')"></p-dropdown>
+				</th>				
+				<th *ngIf="loggedInUser.role != 'admin'">				
 					<input type="text" class="global-search" pInputText placeholder="Search" (input)="subjectListing.filterGlobal($event.target.value, 'contains')" style="width:50%; margin-right:2%; ">
 					
 					<p-dropdown [style]="{'width':'20%','margin-right':'2%'}" [options]="statuses" (onChange)="subjectListing.filter($event.value, 'status', 'equals')"></p-dropdown>
@@ -35,7 +41,7 @@
 						<p-sortIcon [field]="col.field" ariaLabel="Activate to sort" ariaLabelDesc="Activate to sort in descending order" ariaLabelAsc="Activate to sort in ascending order"></p-sortIcon>
 					</th>
 				</ng-container>
-				<th width="200">Actions</th>
+				<th width="200" *ngIf="loggedInUser.role == 'admin'">Actions</th>
 			</tr>
         </ng-template>
 		
@@ -51,7 +57,7 @@
               Enabled
             </span>
 		  </td>
-          <td>
+		  <td *ngIf="loggedInUser.role == 'admin'">
 			<span *ngIf="subject.status == 0">
               <a title="Enable" class='btn bg-success listing-actions' (click)="enableSubject(subject.id)"><i class="fa fa-check"></i></a>
             </span> 

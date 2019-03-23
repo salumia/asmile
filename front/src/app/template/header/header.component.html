@@ -95,13 +95,12 @@
 							<span>Manage Subjects</span>
 						</a>
 					</li>
-					
-					<!-- <li *ngIf="userData.role == 'admin'">
-						<a routerLink="/contract-list">
+					<li class="active">
+						<a routerLink="/subjects" *ngIf="userData.role == 'teacher'">
 							<i class="fa fa-group"></i>
-							<span>Manage Contracts</span>
+							<span>Available Subjects</span>
 						</a>
-					</li> -->					
+					</li>				
 				</ul>
 			</li>
 

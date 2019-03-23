@@ -19,6 +19,8 @@ import { StudentEditComponent } from './student/student-edit/student-edit.compon
 import { StudentListComponent } from './student/student-list/student-list.component';
 import { StudentViewComponent } from './student/student-view/student-view.component';
 import { StudentAddComponent } from './student/student-add/student-add.component';
+import { SubjectManageComponent } from './student/subject-manage/subject-manage.component';
+import { ViewEngagementComponent } from './student/view-engagement/view-engagement.component';
 
 import { ParentEditComponent } from './parent/parent-edit/parent-edit.component';
 import { ParentListComponent } from './parent/parent-list/parent-list.component';
@@ -50,6 +52,8 @@ const routes: Routes = [
   {path: 'student/edit/:id', component: StudentEditComponent},
   {path: 'student/view/:id', component: StudentViewComponent},   
   {path: 'student/add', component: StudentAddComponent},  
+  {path: 'student/manage-subjects/:id', component: SubjectManageComponent},  
+  {path: 'student-engagement/view/:id', component: ViewEngagementComponent},  
   
   {path: 'parents', component: ParentListComponent},
   {path: 'parent/create', component: ParentEditComponent},

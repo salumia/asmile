@@ -7,9 +7,12 @@ use Illuminate\Http\Response;
 use Illuminate\Routing\Controller;
 
 use Modules\Subject\Entities\Subject;
+use Modules\Subject\Entities\StudentSubjects;
 
 class SubjectController extends Controller
 {
+	private $user;
+	private $query;
     /**
      * Display a listing of the resource.
      * @return Response
@@ -112,5 +115,60 @@ class SubjectController extends Controller
 	public function getSubjectArray(Request $request)
     {
        return new Response(Subject::select('id as value', 'name as label')->get());
+    }
+	
+	public function getStudentSubjects($id){
+		
+		$data = StudentSubjects::where('student_id','=',$id)->get();
+		foreach($data as $item){
+			$item->getSubjectData;
+		}
+
+		return new Response($data);
+	}
+		
+	public function subjectSuggestionList($id,$query) {
+		$this->user = $id;
+		$this->query = $query;
+		
+		$users = Subject::select('name as label', 'id as value')
+				->whereNotIn('id',function($query){
+					   $query->select('subject_id')->from('student_subjects')->where('student_id',$this->user);
+					})
+				->where([['name',"like",'%'.$this->query.'%']])
+				->get();
+		return new Response($users);
+    }
+	
+	public function assignSubject(Request $request) {
+		$data = $request->post();
+		$data = StudentSubjects::create($data);
+
+        return new Response([
+            'message' => 'Subject assigned successfully',
+            'data' => $data
+        ]);
+    }
+	
+	public function deleteSubject( $StudentSubject)
+    {
+		 // Delete the Page
+		try {
+			$StudentSubject = StudentSubjects::find($StudentSubject);
+			$StudentSubject->delete();
+		}
+		catch(\Exception $e) {
+			$response = new Response([
+				'message' => $e->getMessage(),
+				'data' => $StudentSubject
+			]);
+			$response->setStatusCode(Response::HTTP_INTERNAL_SERVER_ERROR);
+			return $response;
+		}
+
+		return new Response([
+			'message' => 'Subject removed successfully',
+			'data' => $StudentSubject
+		]);      
     }
 }

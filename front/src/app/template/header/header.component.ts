@@ -55,6 +55,10 @@ export class HeaderComponent implements OnInit {
 				this.items.push({label: 'Profile', icon: 'fa-user', routerLink: '/student/view/'+this.userData.id});
 				this.items.push({label: 'Edit Profile', icon: 'fa-pencil', routerLink: '/student/edit/'+this.userData.id});
 				this.items.push({label: 'Change Password', icon: 'fa-lock', routerLink: '/user/change-password'});
+			} else if(this.userData.role == "parent"){
+				this.items.push({label: 'Profile', icon: 'fa-user', routerLink: '/parent/view/'+this.userData.id});
+				this.items.push({label: 'Edit Profile', icon: 'fa-pencil', routerLink: '/parent/edit/'+this.userData.id});
+				this.items.push({label: 'Change Password', icon: 'fa-lock', routerLink: '/user/change-password'});
 			}
 			
 			this.items.push({label: 'Logout', icon: 'fa-sign-out', routerLink: '/logout'});

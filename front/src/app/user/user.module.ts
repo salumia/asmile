@@ -48,6 +48,8 @@ import { ParentEditComponent } from './parent/parent-edit/parent-edit.component'
 import { ParentListComponent } from './parent/parent-list/parent-list.component';
 import { ParentViewComponent } from './parent/parent-view/parent-view.component';
 import { StudentAddComponent } from './student/student-add/student-add.component';
+import { SubjectManageComponent } from './student/subject-manage/subject-manage.component';
+import { ViewEngagementComponent } from './student/view-engagement/view-engagement.component';
 
 @NgModule({
   imports: [
@@ -77,7 +79,7 @@ import { StudentAddComponent } from './student/student-add/student-add.component
 	AutoCompleteModule
   ],
   providers: [AuthService, UserService, ConfirmationService],
-  declarations: [UserListComponent, UserEditComponent, DashboardComponent, ChangePasswordComponent, ViewComponent, AdminViewComponent, AdminEditComponent, TeacherEditComponent, TeacherListComponent, TeacherViewComponent, StudentEditComponent, StudentListComponent, StudentViewComponent, ParentEditComponent, ParentListComponent, ParentViewComponent, StudentAddComponent]
+  declarations: [UserListComponent, UserEditComponent, DashboardComponent, ChangePasswordComponent, ViewComponent, AdminViewComponent, AdminEditComponent, TeacherEditComponent, TeacherListComponent, TeacherViewComponent, StudentEditComponent, StudentListComponent, StudentViewComponent, ParentEditComponent, ParentListComponent, ParentViewComponent, StudentAddComponent, SubjectManageComponent, ViewEngagementComponent]
 })
 export class UserModule {
   constructor(auth: AuthService, router: Router) {

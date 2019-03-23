@@ -224,6 +224,42 @@ export class UserService {
 			Authorization: 'Bearer ' + token
 		  }
 		});
+	} 	
+	
+	subjectSuggestion(id:number,query:string = 'a'){
+		const token = this.auth.getToken();
+		return this.http.get<any>(this.apiUrl + '/subject/suggestion/'+id+'/'+query ,{
+		  headers: {
+			Authorization: 'Bearer ' + token
+		  }
+		});
 	} 
+	
+	getStudentSubjects(id:number) {
+		const token = this.auth.getToken();
+		return this.http.get<any[]>(this.apiUrl + '/student-subjects/'+id, {
+			headers: {
+				Authorization: 'Bearer ' + token
+			}
+		});
+	}
+	
+	addNewSubject(student_id: number, subject_id: number, assigned_by:number = 0) {
+		const token = this.auth.getToken();		
+		return this.http.post<any>(this.apiUrl + '/student/assign_subject', { subject_id:subject_id, student_id:student_id, assigned_by: assigned_by}, {
+			headers: {
+				Authorization: 'Bearer ' + token
+			}
+		});	
+	}
+	
+	removeStudentSubject(id: number) {
+		const token = this.auth.getToken();
+		return this.http.get<any>(this.apiUrl + '/student/delete_subject/' + id, {
+		  headers: {
+			Authorization: 'Bearer ' + token
+		  }
+		});
+	}
 
 }
