@@ -310,21 +310,21 @@ class UserController extends Controller
         ]);
 	}
 	
-	public function uploadDocuments(Request $request) {
-		$destinationPath = public_path('/employee');
+	public function uploadProfile(Request $request) {
+		$destinationPath = public_path('/users');
 		$output = [];
-		foreach($request->file('documents') as $image){
-			$name = time().'.'.$image->getClientOriginalExtension();			
-			$image->move($destinationPath, $name);
-			$output[] = array('name'=>$name,'original_name'=>$image->getClientOriginalName());
-		}
+		$image = $request->file('profile');
+		$name = time().'.'.$image->getClientOriginalExtension();			
+		$image->move($destinationPath, $name);
+		$output[] = array('name'=>$name,'original_name'=>$image->getClientOriginalName());
+	
 		return new Response([
             'message' => 'Files uploaded successfully',
             'upoadedfiles' => $output
         ]);
 	}
 	
-	public function deleteDocument(Request $request) {
+	public function deleteProfile(Request $request) {
 		$user_id = $request->post('id');
 		$file = $request->post('file');
 		$destinationPath = public_path('employee');
@@ -356,6 +356,7 @@ class UserController extends Controller
         ]);
     }
 	
+	
 	public function suggestionList($id,$query) {
 		$this->user = $id;
 		$this->query = $query;
@@ -368,4 +369,17 @@ class UserController extends Controller
 				->get();
 		return new Response($users);
     }
+	
+	public function studentLogin(Request $request){
+        $data = $request->post();
+		echo "<pre>"; 
+		print_r($data);
+		echo bcrypt($request->password);
+		//$users = User::where([['email',"=",$data['email']],['role',"=",$data['password']]])
+		return new Response([
+            'message' => 'Student logged in successfully',
+            //'data' => $student
+        ]);
+	}
+	
 }

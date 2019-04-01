@@ -261,5 +261,23 @@ export class UserService {
 		  }
 		});
 	}
+	
+	getStudentSubjectList(id:number) {
+		const token = this.auth.getToken();
+		return this.http.get<any>(this.apiUrl + '/student-subject-list/'+id, {
+			headers: {
+				Authorization: 'Bearer ' + token
+			}
+		});
+	}
+		
+	getSubjectSessions(id:number, subject:number) {
+		const token = this.auth.getToken();
+		return this.http.get<any[]>(this.apiUrl + '/subject-sessions/'+id+'/'+subject, {
+			headers: {
+				Authorization: 'Bearer ' + token
+			}
+		});
+	}
 
 }

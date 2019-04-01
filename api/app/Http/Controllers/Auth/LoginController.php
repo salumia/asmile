@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Modules\Subject\Entities\StudentSubjects;
 
 class LoginController extends Controller
 {
@@ -50,6 +51,29 @@ class LoginController extends Controller
             return response()->json([
                 'data' => $user->toArray(),
             ]);
+        }
+
+        return $this->sendFailedLoginResponse($request);
+    }    
+	
+	public function loginStudent(Request $request)
+    {
+        $this->validateLogin($request);
+
+        if ($this->attemptLogin($request)) {
+            $user = $this->guard()->user();			
+			if($user->role == 'student'){
+				$subjects = StudentSubjects::where('student_id','=',$user->id)->get();
+				foreach($subjects as $item){
+					$item->getSubjectData;
+				}
+				$user->subjects = $subjects;
+				return response()->json([
+					'data' => $user->toArray(),
+				]);
+			} else {
+				return $this->sendFailedLoginResponse($request);
+			}
         }
 
         return $this->sendFailedLoginResponse($request);

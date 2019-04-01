@@ -6945,3 +6945,6 @@ textarea.form-control{
 
 .manage-subjects-box{ margin-top:50px; }
 .manage-subjects-box a{ font-weight:bold; color:white !important;}
+.profile_images{ width:100px; background: url('assets/placeholder.jpg') no-repeat scroll 0 0 / cover}
+.line_charts { margin-bottom: 60px; }
+.observation_timestamp { display: block;font-size: 14px; }

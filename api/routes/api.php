@@ -22,5 +22,6 @@ Route::post('reset-password', 'PasswordResetController@create');
 Route::post('register', 'Auth\RegisterController@register');
 Route::post('login', 'Auth\LoginController@login');
 Route::post('login-admin', 'Auth\AdminLoginController@loginAdmin');
+Route::post('login-student', 'Auth\LoginController@loginStudent');
 Route::post('logout', 'Auth\LoginController@logout');
 Route::post('admin/change-password/{user}', 'AdminController@changePassword');//->middleware('auth:api');

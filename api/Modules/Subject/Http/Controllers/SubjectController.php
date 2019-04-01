@@ -8,6 +8,7 @@ use Illuminate\Routing\Controller;
 
 use Modules\Subject\Entities\Subject;
 use Modules\Subject\Entities\StudentSubjects;
+use App\User;
 
 class SubjectController extends Controller
 {
@@ -170,5 +171,16 @@ class SubjectController extends Controller
 			'message' => 'Subject removed successfully',
 			'data' => $StudentSubject
 		]);      
+    }
+
+	public function getStudentSubjectList($id) {
+		$this->user = $id;
+		$user = User::find($this->user);
+		$subjects = Subject::select('name', 'id')
+				->whereIn('id',function($query){
+					   $query->select('subject_id')->from('student_subjects')->where('student_id',$this->user);
+					})
+				->get();
+		return new Response(array("user"=> $user, "subjects"=> $subjects));
     }
 }

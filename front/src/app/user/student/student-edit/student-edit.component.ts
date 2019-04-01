@@ -8,6 +8,7 @@ import { Validators, FormControl, FormGroup, FormBuilder } from '@angular/forms'
 import { AuthService } from '../../../auth/auth.service';
 import { MessageService } from 'primeng/components/common/messageservice';
 import { Location} from '@angular/common';
+import { ConfigServiceService } from '../../../config-service.service';
 
 @Component({
   selector: 'app-student-edit',
@@ -25,8 +26,14 @@ export class StudentEditComponent implements OnInit {
 	editMode: boolean = false;
 		
 	showPassword: boolean;
+	uploadedFiles: any[] = [];
 	
-	constructor(aroute: ActivatedRoute, private router: Router, private userService: UserService, private fb: FormBuilder, private auth: AuthService, private messageService: MessageService, private _location: Location, private industryService:IndustryService) {
+	readonly apiUrl;
+	readonly baseUrl;
+	
+	constructor(aroute: ActivatedRoute, private router: Router, private userService: UserService, private fb: FormBuilder, private auth: AuthService, private messageService: MessageService, private _location: Location, private industryService:IndustryService, config: ConfigServiceService) {
+		this.apiUrl = config.getApiUrl();
+		this.baseUrl = config.getBaseUrl();
 		this.showPassword = false;
 			aroute.params.subscribe(params => {
 				this.id = params['id'];
@@ -62,6 +69,7 @@ export class StudentEditComponent implements OnInit {
 		this.userService.getUser(this.id).subscribe(res => {
 		  this.user = res;
 		  this.loadSpinner = false;
+		  console.log(this.user);
 		});
 	}
 	
@@ -125,5 +133,12 @@ export class StudentEditComponent implements OnInit {
 	
 	toggle_password() {
 		this.showPassword = !this.showPassword;
+    }
+	
+	onUpload(event) {
+		this.user.profile = JSON.parse(event.xhr.response).upoadedfiles[0].name ;
+        for(let file of event.files) {
+            this.uploadedFiles.push(file);
+        }
     }
 }

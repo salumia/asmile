@@ -30,6 +30,7 @@ import { ConfirmDialogModule} from 'primeng/confirmdialog';
 
 import {ConfirmationService} from 'primeng/api';
 import {AutoCompleteModule} from 'primeng/autocomplete';
+import {ChartModule} from 'primeng/chart';
 
 
 import { UserListComponent } from './user-list/user-list.component';
@@ -76,7 +77,8 @@ import { ViewEngagementComponent } from './student/view-engagement/view-engageme
 	ProgressSpinnerModule,
 	TabViewModule,
 	ConfirmDialogModule,
-	AutoCompleteModule
+	AutoCompleteModule,
+	ChartModule
   ],
   providers: [AuthService, UserService, ConfirmationService],
   declarations: [UserListComponent, UserEditComponent, DashboardComponent, ChangePasswordComponent, ViewComponent, AdminViewComponent, AdminEditComponent, TeacherEditComponent, TeacherListComponent, TeacherViewComponent, StudentEditComponent, StudentListComponent, StudentViewComponent, ParentEditComponent, ParentListComponent, ParentViewComponent, StudentAddComponent, SubjectManageComponent, ViewEngagementComponent]

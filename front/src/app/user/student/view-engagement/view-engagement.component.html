@@ -1,3 +1,42 @@
-<p>
-  view-engagement works!
-</p>
+<p-growl [(value)]="msgs" key="top-corner"></p-growl>
+<div class="row">		
+	<div class="col-lg-12"> 
+		<a href="javascript:void(0);" (click)="goBack()"><i class="fa fa-arrow-left"></i> Go Back</a>
+	</div>
+	<div class="col-lg-12 d-flex justify-content-center" *ngIf="pageLoader">
+		<p-progressSpinner ></p-progressSpinner>		
+	</div>
+</div>
+<div class="panel" *ngIf="!pageLoader">
+	<div class="records--body">
+		<div class="title">
+			<div class="col-lg-6"> 
+				<!-- Page Title Start -->
+				<h2 class="page--title h5">View Engagement :  {{user.name}} </h2>
+				<!-- Page Title End -->
+			</div>
+			<div class="col-lg-6"> 
+				<!-- Page Title Start -->
+				<h2 class="page--title h5 text-right"  *ngIf="id > 0">ID: {{user.id}}</h2>
+				<!-- Page Title End -->
+			</div>
+		</div>
+		
+		<div class="form-group row">
+			<span class="label-text col-md-3 col-form-label">Select Subject</span>
+
+			<div class="col-md-9">
+				<p-dropdown [options]="subjects" [(ngModel)]="selected" placeholder="Select Subject" optionLabel="name" (onChange)="onChangeSubject($event)"></p-dropdown>
+			</div>
+		</div>		
+		<div class="col-lg-12 d-flex justify-content-center" *ngIf="loader">
+			<p-progressSpinner ></p-progressSpinner>		
+		</div>
+		<div class="tab-pane fade show active" *ngIf="data.length > 0&& !loader">
+			<div class="col-md-12 line_charts" *ngFor="let item of data">
+				<p-chart type="line" [data]="item.chart" ></p-chart>
+				<small class="text-center observation_timestamp">Observation Timestamp - {{item.timestamp}}</small>
+			</div>
+		</div>
+	</div>
+</div>

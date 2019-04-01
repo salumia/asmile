@@ -3,6 +3,7 @@ export class User {
   name: string;
   email: string;
   phone: number;
+  profile: string;
   address: string;
   city: string;
   zip: string;
@@ -23,6 +24,7 @@ export class User {
     this.name = data.name;
     this.email = data.email;
     this.phone = data.phone;
+    this.profile = data.profile;
     this.address = data.address;
     this.city = data.city;
     this.zip = data.zip;    
