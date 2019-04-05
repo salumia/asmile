@@ -78,26 +78,26 @@
 					
 					<li class="active">
 						<a routerLink="/students" *ngIf="userData.role != 'student'">
-							<i class="fa fa-group"></i>
+							<i class="fa fa-child"></i>
 							<span>Manage Students</span>
 						</a>
 					</li>
 					
 					<li class="active">
-						<a routerLink="/parents" *ngIf="userData.role == 'admin'">
-							<i class="fa fa-group"></i>
+						<a routerLink="/parents" *ngIf="userData.role == 'admin'||userData.role == 'teacher'">
+							<i class="fa fa-user"></i>
 							<span>Manage Parents</span>
 						</a>
 					</li>
 					<li class="active">
 						<a routerLink="/subjects" *ngIf="userData.role == 'admin'">
-							<i class="fa fa-group"></i>
+							<i class="fa fa-file"></i>
 							<span>Manage Subjects</span>
 						</a>
 					</li>
 					<li class="active">
 						<a routerLink="/subjects" *ngIf="userData.role == 'teacher'">
-							<i class="fa fa-group"></i>
+							<i class="fa fa-file"></i>
 							<span>Available Subjects</span>
 						</a>
 					</li>				

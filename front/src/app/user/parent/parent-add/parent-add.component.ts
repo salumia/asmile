@@ -1,7 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { UserService } from '../../user.service';
-import { IndustryService } from '../../../contract/industry.service';
 import { User } from '../../user';
 import { Message, SelectItem } from 'primeng/api';
 import { Validators, FormControl, FormGroup, FormBuilder } from '@angular/forms';
@@ -10,12 +9,11 @@ import { MessageService } from 'primeng/components/common/messageservice';
 import { Location} from '@angular/common';
 
 @Component({
-  selector: 'app-student-add',
-  templateUrl: './student-add.component.html',
-  styleUrls: ['./student-add.component.css']
+  selector: 'app-parent-add',
+  templateUrl: './parent-add.component.html',
+  styleUrls: ['./parent-add.component.css']
 })
-
-export class StudentAddComponent implements OnInit {
+export class ParentAddComponent implements OnInit {
 	@ViewChild('documentsChild') documentsChild;
 	id: number;
 	user: User = {} as User;
@@ -33,9 +31,11 @@ export class StudentAddComponent implements OnInit {
 	addUserTab = true;
 	searchTab = true;
 	
-	student_id:number;    
+	parent_id:number;	
+	selectedContact:string = "";	
+    
 	
-	constructor(aroute: ActivatedRoute, private router: Router, private userService: UserService, private fb: FormBuilder, private auth: AuthService, private messageService: MessageService, private _location: Location, private industryService:IndustryService) {
+	constructor(aroute: ActivatedRoute, private router: Router, private userService: UserService, private fb: FormBuilder, private auth: AuthService, private messageService: MessageService, private _location: Location) {
 		this.showPassword = false;
 			aroute.params.subscribe(params => {
 				this.id = params['id'];
@@ -62,18 +62,18 @@ export class StudentAddComponent implements OnInit {
 		});
 		
 		this.Searchform = this.fb.group({
-			'student': new FormControl('', Validators.required),
+			'parent': new FormControl('', Validators.required)
 		});
 
 		if(this.id > 0 ){
-			this.loadUser();
+			this.loadUser();			
 		}else{
 			this.Userform.controls['password'].setValidators(Validators.required);		
 		}
 	}
 	
-	saveSearchStudent() {
-		this.createLink(this.student_id);
+	saveSearchParent() {
+		this.createLink(this.parent_id);
 	}
 	
 	loadUser() {	
@@ -90,7 +90,7 @@ export class StudentAddComponent implements OnInit {
                     if(res == 0){
                         resolve(null);
                     } else {
-					  this.msgs.push({severity: 'error', summary: 'Username', detail: 'Username already registered with system. Use Search Student Tab to add in your list'});
+					  this.msgs.push({severity: 'error', summary: 'Username', detail: 'Username already registered with system. Use Search Parent Tab to add in your list'});
                         setTimeout(() => {
                           this.msgs = [];
                         }, 2000);
@@ -110,7 +110,7 @@ export class StudentAddComponent implements OnInit {
                     if(res == 0){
                         resolve(null);
                     } else {
-                      this.msgs.push({severity: 'error', summary: 'Email', detail: 'Email already registered with system. Use Search Student Tab to add in your list'});
+                      this.msgs.push({severity: 'error', summary: 'Email', detail: 'Email already registered with system. Use Search Parent Tab to add in your list'});
                         setTimeout(() => {
                           this.msgs = [];
                         }, 2000);
@@ -122,21 +122,21 @@ export class StudentAddComponent implements OnInit {
         return q;
     }     
 	
-	createLink(student_id) {
-		this.userService.createLink(this.loggedInUser.id, student_id).subscribe(res => {				
+	createLink(parent_id) {
+		this.userService.createTeacherParentLink(this.loggedInUser.id, parent_id).subscribe(res => {				
 				if(res.data.id > 0 ){
-					this.messageService.add({key: 'top-corner', severity: 'success', summary: 'Success', detail: "Student added and linked with you"});
+					this.messageService.add({key: 'top-corner', severity: 'success', summary: 'Success', detail: "Parent added and linked with you"});
 				}					
 				
 				setTimeout(() => {
-					this.router.navigate(['students']);
+					this.router.navigate(['parents']);
 				}, 2000);
 		});
 	}
 	
 	saveUser() {
 		this.loadSpinner = true;
-		this.user.role = 'student';
+		this.user.role = 'parent';
 		this.userService.saveUser(this.id, this.user).subscribe(res => {
 				this.createLink(res.user.id);
 		});
@@ -152,11 +152,12 @@ export class StudentAddComponent implements OnInit {
 
 	onSelectContact(event) {
 		console.log(event);
-		this.student_id = event.value;
+		this.selectedContact = event.label;
+		this.parent_id = event.value;
 	}
 	
 	searchContact() {
-		this.userService.searchStudentSuggestion(this.loggedInUser.id,' ').subscribe(res => {	
+		this.userService.searchParentSuggestion(this.loggedInUser.id,' ').subscribe(res => {	
 			this.suggestions = [];
 			this.suggestions = res;
 			console.log(this.suggestions);

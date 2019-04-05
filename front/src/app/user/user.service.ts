@@ -206,27 +206,46 @@ export class UserService {
 		});
 	}
 	
-	createLink(id: number, student_id: number) {
-		const token = this.auth.getToken();		
-		return this.http.post<any>(this.apiUrl + '/create_link', { teacher_id:id, student_id:student_id}, {
+	createLink(id: number, student_id: number, assigned_by:number = 0) {
+		const token = this.auth.getToken();
+		return this.http.post<any>(this.apiUrl + '/create_link', { teacher_id:id, student_id:student_id, assigned_by: assigned_by}, {
 			headers: {
 				Authorization: 'Bearer ' + token
 			}
 		});
 	
-	 }
-	 
-	 
-	searchStudentSuggestion(id:number,query:string = 'a'){
+	}
+	
+	createTeacherParentLink(id: number, parent_id: number) {
 		const token = this.auth.getToken();
-		return this.http.get<any>(this.apiUrl + '/student/suggestion/'+id+'/'+query ,{
+		return this.http.post<any>(this.apiUrl + '/create_teacher-parent-link', { teacher_id:id, parent_id:parent_id},{
+			headers: {
+				Authorization: 'Bearer ' + token
+			}
+		});
+	
+	}
+	 
+	 
+	searchStudentSuggestion(id:number,query:string = 'a',loggedUserId:number = 0){
+		const token = this.auth.getToken();
+		return this.http.get<any>(this.apiUrl + '/student/suggestion/'+id+'/'+query+'/'+loggedUserId ,{
 		  headers: {
 			Authorization: 'Bearer ' + token
 		  }
 		});
 	} 	
 	
-	subjectSuggestion(id:number,query:string = 'a'){
+	searchParentSuggestion(id:number,query:string = 'a',loggedUserId:number = 0){
+		const token = this.auth.getToken();
+		return this.http.get<any>(this.apiUrl + '/parent/suggestion/'+id+'/'+query+'/'+loggedUserId ,{
+		  headers: {
+			Authorization: 'Bearer ' + token
+		  }
+		});
+	} 	
+	
+	subjectSuggestion(id:number,query:string = 'a',loggedInUser = 0){
 		const token = this.auth.getToken();
 		return this.http.get<any>(this.apiUrl + '/subject/suggestion/'+id+'/'+query ,{
 		  headers: {
@@ -234,6 +253,15 @@ export class UserService {
 		  }
 		});
 	} 
+	
+	getUserSubjects(id:number) {
+		const token = this.auth.getToken();
+		return this.http.get<any[]>(this.apiUrl + '/student-subjects/'+id, {
+			headers: {
+				Authorization: 'Bearer ' + token
+			}
+		});
+	}
 	
 	getStudentSubjects(id:number) {
 		const token = this.auth.getToken();
@@ -277,6 +305,24 @@ export class UserService {
 			headers: {
 				Authorization: 'Bearer ' + token
 			}
+		});
+	}
+	
+	getUserStudents(id:number,role:string = 'admin') {
+		const token = this.auth.getToken();
+		return this.http.get<User[]>(this.apiUrl + '/getUserStudents/'+id, {
+			headers: {
+				Authorization: 'Bearer ' + token
+			}
+		});
+	}
+	
+	removeStudent(index: number) {
+		const token = this.auth.getToken();
+		return this.http.get<any>(this.apiUrl + '/remove_student/' + index, {
+		  headers: {
+			Authorization: 'Bearer ' + token
+		  }
 		});
 	}
 

@@ -12,7 +12,7 @@
 		<div class="title">
 			<div class="col-lg-6"> 
 				<!-- Page Title Start -->
-				<h2 class="page--title h5"><i class="fa fa-user"></i> Manage {{user?.name}} Subjects</h2>
+				<h2 class="page--title h5"><i class="fa fa-user"></i> {{user?.name}}</h2>
 				<!-- Page Title End -->
 			</div>
 			<div class="col-lg-6"> 
@@ -85,29 +85,29 @@
 		<div class="row manage-subjects-box">
 			<div class="col-lg-6"> 
 				<!-- Page Title Start -->
-				<h2 class="page--title h5">Enrolled Subjects</h2>
+				<h2 class="page--title h5">Manage Students</h2>
 				<!-- Page Title End -->
 			</div>
 			<div class="col-lg-6 text-right"> 
-				<a (click)="showAddContactDialog()" class="btn btn-rounded btn-warning">Add New Subject</a>
+				<a (click)="showAddContactDialog()" class="btn btn-rounded btn-warning">Assign New Student</a>
 			</div>
 		</div>
 		
 		<div class="table-responsive">
-    <p-table #subjectListing [columns]="cols" [value]="enrolledSubjects" [paginator]="true" [rows]="10" [rowsPerPageOptions]="[10,25,50]" paginatorPosition="both" *ngIf="enrolledSubjects?.length > 0">
+    <p-table #userListing [columns]="cols" [value]="linkedStudents" [paginator]="true" [rows]="10" [rowsPerPageOptions]="[10,25,50]" paginatorPosition="both" *ngIf="linkedStudents?.length > 0">
 		
 		<ng-template pTemplate="header" let-columns>			
 			<tr class="custom-white">
 				<th *ngIf="loggedInUser.role == 'parent'">				
-					<input type="text" class="global-search" pInputText placeholder="Search" (input)="subjectListing.filterGlobal($event.target.value, 'contains')" style="width:50%; margin-right:2%; ">
+					<input type="text" class="global-search" pInputText placeholder="Search" (input)="userListing.filterGlobal($event.target.value, 'contains')" style="width:50%; margin-right:2%; ">
 					
-					<p-dropdown [style]="{'width':'20%','margin-right':'2%'}" [options]="statuses" (onChange)="subjectListing.filter($event.value, 'get_subject_data.status', 'equals')"></p-dropdown>
+					<p-dropdown [style]="{'width':'20%','margin-right':'2%'}" [options]="statuses" (onChange)="userListing.filter($event.value, 'get_student_data.status', 'equals')"></p-dropdown>
 					
 				</th>
 				<th colspan="2" *ngIf="loggedInUser.role != 'parent'">				
-					<input type="text" class="global-search" pInputText placeholder="Search" (input)="subjectListing.filterGlobal($event.target.value, 'contains')" style="width:50%; margin-right:2%; ">
+					<input type="text" class="global-search" pInputText placeholder="Search" (input)="userListing.filterGlobal($event.target.value, 'contains')" style="width:50%; margin-right:2%; ">
 					
-					<p-dropdown [style]="{'width':'20%','margin-right':'2%'}" [options]="statuses" (onChange)="subjectListing.filter($event.value, 'get_subject_data.status', 'equals')"></p-dropdown>
+					<p-dropdown [style]="{'width':'20%','margin-right':'2%'}" [options]="statuses" (onChange)="userListing.filter($event.value, 'get_student_data.status', 'equals')"></p-dropdown>
 					
 				</th>
 				<th class="recordsPerPageTitle">
@@ -126,22 +126,22 @@
         </ng-template>
 		
 		
-      <ng-template pTemplate="body" let-subject>
+      <ng-template pTemplate="body" let-student>
         <tr>
-          <td>{{ subject.get_subject_data.name }}</td>
+          <td>{{ student.get_student_data.name }}</td>
 		  <td>
-		    <span *ngIf="subject.get_subject_data.status == 0">
+		    <span *ngIf="student.get_student_data.status == 'disabled'">
               Disabled
             </span> 
-			<span *ngIf="subject.get_subject_data.status == 1">
+			<span *ngIf="student.get_student_data.status == 'user'">
               Enabled
             </span>
 		  </td>
           <td *ngIf="loggedInUser.role == 'admin'">
-			<a title="Delete" (click)="removeSubject(subject.id)" class='btn bg-danger listing-actions'><i class="fa fa-trash"></i></a>		
+			<a title="Delete" (click)="removeStudent(student.id)" class='btn bg-danger listing-actions'><i class="fa fa-trash"></i></a>		
           </td>
 		  <td *ngIf="loggedInUser.role == 'teacher'">
-			<a title="Delete" (click)="removeSubject(subject.id)" class='btn bg-danger listing-actions' *ngIf="subject.assigned_by == loggedInUser.id"><i class="fa fa-trash"></i></a>
+			<a title="Delete" (click)="removeStudent(student.id)" class='btn bg-danger listing-actions' *ngIf="student.assigned_by == loggedInUser.id"><i class="fa fa-trash"></i></a>
           </td>
         </tr>
       </ng-template>
@@ -151,24 +151,26 @@
 </div>
 
 
-<p-dialog header="Enroll New Subject" [(visible)]="addContactVisible" [modal]="true" [responsive]="true" [style]="{width: '600px', minWidth: '200px'}" [minY]="70" [baseZIndex]="10000">
-	<form id="Searchform" [formGroup]="Searchform" *ngIf="!loadSpinner" (ngSubmit)="addSearchSubject()">
- 	<div class="panel" style="width:400px;box-shadow:unset;">	
-	    <!-- <p-messages [(value)]="msgs"></p-messages> -->
+<p-dialog header="Assign New Student" [(visible)]="addContactVisible" [modal]="true" [responsive]="true" [minY]="70" [baseZIndex]="10000">
+	<form id="Searchform" [formGroup]="Searchform" *ngIf="!loadSpinner" (ngSubmit)="addSearchStudent()">
+ 	<div class="panel" style="min-width:400px;box-shadow:unset;min-height:500px">	
 		<div class="row">
 		  <div class="col-md-12">
-			<p-autoComplete [(ngModel)]="selectedSubject" [suggestions]="suggestions" formControlName="subject" [style]="{width: '100%'}" (completeMethod)="searchContact($event)" (onSelect)="onSelectContact($event)" placeholder="Type here to search subjects" [minLength]="1">
-				<ng-template let-subject pTemplate="item">
-					{{subject.label}}
+			<p-dropdown placeholder="Select" [options]="suggestions" [(ngModel)]="student_id" filter="true" formControlName="student" [style]="{width: '100%'}"  (onChange)="onSelectContact($event)">
+				<ng-template let-item pTemplate="selectedItem">
+					<span style="vertical-align:middle; margin-left: .5em">{{item.label}}</span>
 				</ng-template>
-			</p-autoComplete>
+				<ng-template let-student pTemplate="item">
+					{{student.label}}
+				</ng-template>
+			</p-dropdown>
 		  </div>
 		</div>	
 		<div class="row" style="margin-top:10px;">
 		  <div class="col-md-4 text-right">
 		  </div>
 		  <div class="col-md-8">
-			<button type="submit" class="btn btn-rounded btn-success" [disabled]="subject_id == 0">Add</button>
+			<button type="submit" class="btn btn-rounded btn-success" [disabled]="student_id == 0">Add</button>
 			
 		  </div>
 		</div>

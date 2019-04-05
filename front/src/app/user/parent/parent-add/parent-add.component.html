@@ -22,7 +22,7 @@
 			</div>
 		</div>
 		<p-tabView>
-			<p-tabPanel header="Add Student" [selected]="true" *ngIf="addUserTab" >
+			<p-tabPanel header="Add Parent" [selected]="true" *ngIf="addUserTab" >
 				<form id="Userform" [formGroup]="Userform" *ngIf="!loadSpinner" (ngSubmit)="saveUser(Userform.value)" >						
 					<div class="form-group row">
 						<span class="label-text col-md-3 col-form-label">Name: *</span>
@@ -101,18 +101,20 @@
 					</div>
 				</form>
 			</p-tabPanel>
-						
-			<p-tabPanel header="Search Student" *ngIf="searchTab" >
-			<form id="Searchform" [formGroup]="Searchform" *ngIf="!loadSpinner" (ngSubmit)="saveSearchStudent()" >
+					
+					
+			<p-tabPanel header="Search Parent" *ngIf="searchTab" >
+			<form id="Searchform" [formGroup]="Searchform" *ngIf="!loadSpinner" (ngSubmit)="saveSearchParent()" >
 				<div class="form-group row">
 					<span class="label-text col-md-3 col-form-label">Enter Email : *</span>
 					<div class="col-md-9">
-						<p-dropdown placeholder="Select" [options]="suggestions" [(ngModel)]="student_id" filter="true" formControlName="student" [style]="{width: '100%'}"  (onChange)="onSelectContact($event)">
+						
+						<p-dropdown placeholder="Search" [options]="suggestions" [(ngModel)]="parent_id" filter="true" formControlName="parent" [style]="{width: '100%'}"  (onChange)="onSelectContact($event)">
 							<ng-template let-item pTemplate="selectedItem">
 								<span style="vertical-align:middle; margin-left: .5em">{{item.label}}</span>
 							</ng-template>
-							<ng-template let-student pTemplate="item">
-								{{student.label}}
+							<ng-template let-parent pTemplate="item">
+								{{parent.label}}
 							</ng-template>
 						</p-dropdown>
 					</div>
@@ -120,7 +122,7 @@
 				
 				<div class="row mt-3">
 					<div class="col-md-9 offset-md-3">
-						<button type="submit" class="btn btn-rounded btn-success" [disabled]="!Searchform.valid">Add Student</button>
+						<button type="submit" class="btn btn-rounded btn-success" [disabled]="!Searchform.valid">Add Parent</button>
 					</div>
 				</div>
 				</form>

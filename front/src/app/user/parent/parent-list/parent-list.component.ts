@@ -44,8 +44,9 @@ export class ParentListComponent implements OnInit {
 	}
 
 	loadUsers() {
-		this.userService.getParents(this.loggedInUser.id).subscribe(res => {		 this.users = res;
-				 this.loadSpinner = false;
+		this.userService.getParents(this.loggedInUser.id,this.loggedInUser.role).subscribe(res => {
+				this.users = res;
+				this.loadSpinner = false;
 			}		
 		);
 	}

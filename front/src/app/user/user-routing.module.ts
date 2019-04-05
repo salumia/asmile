@@ -23,8 +23,11 @@ import { SubjectManageComponent } from './student/subject-manage/subject-manage.
 import { ViewEngagementComponent } from './student/view-engagement/view-engagement.component';
 
 import { ParentEditComponent } from './parent/parent-edit/parent-edit.component';
+import { ParentAddComponent } from './parent/parent-add/parent-add.component';
 import { ParentListComponent } from './parent/parent-list/parent-list.component';
 import { ParentViewComponent } from './parent/parent-view/parent-view.component';
+
+import { ManageParentStudentsComponent } from './parent/manage-parent-students/manage-parent-students.component';
 
 const routes: Routes = [
   {path: 'settings/users', component: UserListComponent},
@@ -59,6 +62,9 @@ const routes: Routes = [
   {path: 'parent/create', component: ParentEditComponent},
   {path: 'parent/edit/:id', component: ParentEditComponent},
   {path: 'parent/view/:id', component: ParentViewComponent},  
+  {path: 'parent/add', component: ParentAddComponent},
+  
+  {path: 'parent/manage-students/:id', component: ManageParentStudentsComponent},  
   
 ];
 

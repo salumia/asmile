@@ -41,7 +41,6 @@ export class StudentListComponent implements OnInit {
 		this.loggedInUser = this.authService.getAuth();
 		this.loadUsers();
 	}
-
 	
 	loadUsers() {
 		console.log("students");

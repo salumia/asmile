@@ -31,6 +31,7 @@ import { ConfirmDialogModule} from 'primeng/confirmdialog';
 import {ConfirmationService} from 'primeng/api';
 import {AutoCompleteModule} from 'primeng/autocomplete';
 import {ChartModule} from 'primeng/chart';
+import {PaginatorModule} from 'primeng/paginator';
 
 
 import { UserListComponent } from './user-list/user-list.component';
@@ -51,6 +52,8 @@ import { ParentViewComponent } from './parent/parent-view/parent-view.component'
 import { StudentAddComponent } from './student/student-add/student-add.component';
 import { SubjectManageComponent } from './student/subject-manage/subject-manage.component';
 import { ViewEngagementComponent } from './student/view-engagement/view-engagement.component';
+import { ManageParentStudentsComponent } from './parent/manage-parent-students/manage-parent-students.component';
+import { ParentAddComponent } from './parent/parent-add/parent-add.component';
 
 @NgModule({
   imports: [
@@ -78,10 +81,11 @@ import { ViewEngagementComponent } from './student/view-engagement/view-engageme
 	TabViewModule,
 	ConfirmDialogModule,
 	AutoCompleteModule,
-	ChartModule
+	ChartModule,
+	PaginatorModule
   ],
   providers: [AuthService, UserService, ConfirmationService],
-  declarations: [UserListComponent, UserEditComponent, DashboardComponent, ChangePasswordComponent, ViewComponent, AdminViewComponent, AdminEditComponent, TeacherEditComponent, TeacherListComponent, TeacherViewComponent, StudentEditComponent, StudentListComponent, StudentViewComponent, ParentEditComponent, ParentListComponent, ParentViewComponent, StudentAddComponent, SubjectManageComponent, ViewEngagementComponent]
+  declarations: [UserListComponent, UserEditComponent, DashboardComponent, ChangePasswordComponent, ViewComponent, AdminViewComponent, AdminEditComponent, TeacherEditComponent, TeacherListComponent, TeacherViewComponent, StudentEditComponent, StudentListComponent, StudentViewComponent, ParentEditComponent, ParentListComponent, ParentViewComponent, StudentAddComponent, SubjectManageComponent, ViewEngagementComponent, ManageParentStudentsComponent, ParentAddComponent]
 })
 export class UserModule {
   constructor(auth: AuthService, router: Router) {

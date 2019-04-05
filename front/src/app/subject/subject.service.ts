@@ -24,13 +24,21 @@ export class SubjectService {
   } 
   
   
-  getSubjects() {
+  getSubjects(id:number,role:string = 'admin') {	  
     const token = this.auth.getToken();
-    return this.http.get<Subject[]>(this.apiUrl + '/subject', {
-      headers: {
-        Authorization: 'Bearer ' + token
-      }
-    });
+	if(role == 'admin'){
+		return this.http.get<Subject[]>(this.apiUrl + '/subject', {
+		  headers: {
+			Authorization: 'Bearer ' + token
+		  }
+		});
+	} else {
+		return this.http.get<Subject[]>(this.apiUrl + '/teacher-subject/'+id, {
+		  headers: {
+			Authorization: 'Bearer ' + token
+		  }
+		});
+	}    
   }
   
   getSubject(id: number) {

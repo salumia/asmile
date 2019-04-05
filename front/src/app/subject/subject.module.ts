@@ -26,8 +26,12 @@ import {ProgressSpinnerModule} from 'primeng/progressspinner';
 import {TabViewModule} from 'primeng/tabview';
 import {ConfirmDialogModule} from 'primeng/confirmdialog';
 import {ConfirmationService} from 'primeng/api';
+import {AutoCompleteModule} from 'primeng/autocomplete';
+
+
 import { SubjectListComponent } from './subject-list/subject-list.component';
 import { SubjectEditComponent } from './subject-edit/subject-edit.component';
+import { ManageUserSubjectsComponent } from './manage-user-subjects/manage-user-subjects.component';
 
 @NgModule({
   imports: [
@@ -53,9 +57,10 @@ import { SubjectEditComponent } from './subject-edit/subject-edit.component';
 	ProgressSpinnerModule,
 	TabViewModule,
 	ConfirmDialogModule,
+	AutoCompleteModule
   ],
   providers: [AuthService, UserService, SubjectService],
-  declarations: [SubjectListComponent, SubjectEditComponent]
+  declarations: [SubjectListComponent, SubjectEditComponent, ManageUserSubjectsComponent]
 })
 
 export class SubjectModule {

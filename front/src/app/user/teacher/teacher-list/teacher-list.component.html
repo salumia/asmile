@@ -59,7 +59,8 @@
 				<a title="Disable" class='btn bg-danger listing-actions' (click)="disableUser(user.id)" ><i class="fa fa-close"></i></a>
 			</span>	
 			<a title="Change Password" class='btn bg-primary listing-actions' (click)="changePassword(user.id)" ><i class="fa fa-lock"></i></a>
-			<a title="Edit" class='btn bg-primary listing-actions' [routerLink]="'/teacher/edit/' + user.id" ><i class="fa fa-pencil-square-o"></i></a>
+			<a title="Edit Profile" class='btn bg-primary listing-actions' [routerLink]="'/teacher/edit/' + user.id" ><i class="fa fa-pencil-square-o"></i></a>
+			<a title="Manage Subjects" [routerLink]="'/manage-subjects/teacher/' + user.id" class='btn bg-primary listing-actions' *ngIf="loggedInUser.role == 'admin'" ><i class="fa fa-file"></i></a>
 			<a title="View" [routerLink]="'/teacher/view/' + user.id" class='btn bg-primary listing-actions' ><i class="fa fa-search"></i></a>
 			<!-- <a title="Delete" class='btn bg-danger listing-actions' (click)="deleteUser(user.id)" ><i class="fa fa-trash"></i></a> -->
 			

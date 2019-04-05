@@ -14,6 +14,7 @@ class SubjectController extends Controller
 {
 	private $user;
 	private $query;
+	private $teacher;
     /**
      * Display a listing of the resource.
      * @return Response
@@ -21,6 +22,16 @@ class SubjectController extends Controller
     public function index()
     {
 		return new Response(Subject::all());
+    }
+	
+	public function getTeacherSubject($id)
+    {
+		$data = StudentSubjects::where('student_id','=',$id)->get();
+		$response = [];
+		foreach($data as $item){
+			$response[] = $item->getSubjectData;
+		}
+		return new Response($response);
     }
 
     /**
@@ -118,6 +129,16 @@ class SubjectController extends Controller
        return new Response(Subject::select('id as value', 'name as label')->get());
     }
 	
+	public function getUserSubjects($id){
+		
+		$data = StudentSubjects::where('student_id','=',$id)->get();
+		foreach($data as $item){
+			$item->getSubjectData;
+		}
+
+		return new Response($data);
+	}
+	
 	public function getStudentSubjects($id){
 		
 		$data = StudentSubjects::where('student_id','=',$id)->get();
@@ -128,17 +149,33 @@ class SubjectController extends Controller
 		return new Response($data);
 	}
 		
-	public function subjectSuggestionList($id,$query) {
+	public function subjectSuggestionList($id, $query, $teacher_id = '') {
 		$this->user = $id;
 		$this->query = $query;
-		
-		$users = Subject::select('name as label', 'id as value')
+		$this->teacher = $teacher_id;
+		if($teacher_id == ''){
+			$subjects = Subject::select('name as label', 'id as value')
+				->whereNotIn('id',function($query){
+					   $query->select('subject_id')->from('student_subjects')->where('student_id',$this->user);
+					})
+				->get();
+		} else {
+		/* $subjects = Subject::select('name as label', 'id as value')
 				->whereNotIn('id',function($query){
 					   $query->select('subject_id')->from('student_subjects')->where('student_id',$this->user);
 					})
 				->where([['name',"like",'%'.$this->query.'%']])
+				->get(); */
+			$subjects = Subject::select('name as label', 'id as value')
+				->whereNotIn('id',function($query){
+					   $query->select('subject_id')->from('student_subjects')->where('student_id',$this->user);
+					})
+				->whereIn('id',function($query){
+					   $query->select('subject_id')->from('student_subjects')->where('student_id',$this->teacher);
+					})
 				->get();
-		return new Response($users);
+		}
+		return new Response($subjects);
     }
 	
 	public function assignSubject(Request $request) {

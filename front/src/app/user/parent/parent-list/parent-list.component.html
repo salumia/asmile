@@ -7,8 +7,9 @@
 		<!-- Page Title End -->
 	</div>
 	<div class="col-lg-6 text-right">
-		<a [routerLink]="'/parent/create'" class="btn btn-rounded btn-warning">Add Parent</a>
-	</div>    
+		<a [routerLink]="'/parent/create'" class="btn btn-rounded btn-warning" *ngIf="loggedInUser.role == 'admin'">Add Parent</a>
+		<a [routerLink]="'/parent/add'" class="btn btn-rounded btn-warning" *ngIf="loggedInUser.role != 'admin'">Add Parent</a>
+	</div>   
 	<div class="col-lg-12 d-flex justify-content-center" *ngIf="loadSpinner"> 
 		<p-progressSpinner ></p-progressSpinner>		
 	</div>
@@ -58,9 +59,10 @@
 			<span *ngIf="user.status != 'disabled'">
 				<a title="Disable" class='btn bg-danger listing-actions' (click)="disableUser(user.id)" ><i class="fa fa-close"></i></a>
 			</span>	
-			<a title="Change Password" class='btn bg-primary listing-actions' (click)="changePassword(user.id)" ><i class="fa fa-lock"></i></a>
-			<a title="Edit" class='btn bg-primary listing-actions' [routerLink]="'/parent/edit/' + user.id" ><i class="fa fa-pencil-square-o"></i></a>
-			<a title="View" [routerLink]="'/parent/view/' + user.id" class='btn bg-primary listing-actions' ><i class="fa fa-search"></i></a>
+			<a title="Change Password" class='btn bg-primary listing-actions' (click)="changePassword(user.id)"  *ngIf="loggedInUser.role == 'admin'" ><i class="fa fa-lock"></i></a>
+			<a title="Edit Profile" class='btn bg-primary listing-actions' [routerLink]="'/parent/edit/' + user.id" ><i class="fa fa-pencil-square-o"></i></a>
+			<a title="Manage Students" class='btn bg-primary listing-actions' [routerLink]="'/parent/manage-students/' + user.id" ><i class="fa fa-child"></i></a>
+			<a title="View" [routerLink]="'/parent/view/' + user.id" class='btn bg-primary listing-actions'  *ngIf="loggedInUser.role == 'admin'"><i class="fa fa-search"></i></a>
 			<!-- <a title="Delete" class='btn bg-danger listing-actions' (click)="deleteUser(user.id)" ><i class="fa fa-trash"></i></a> -->
 			
           </td>

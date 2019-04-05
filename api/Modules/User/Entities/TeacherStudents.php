@@ -9,7 +9,7 @@ use App\User as User;
 class TeacherStudents extends Model
 {
 	use RevisionableTrait;
-    protected $fillable = ['id','teacher_id','student_id'];
+    protected $fillable = ['id','teacher_id','student_id', 'assigned_by'];
 	
 	public function getStudentData() {
         return $this->belongsTo(User::class,'student_id');

@@ -94,20 +94,20 @@
 		</div>
 		
 		<div class="table-responsive">
-    <p-table #subjectListing [columns]="cols" [value]="enrolledSubjects" [paginator]="true" [rows]="10" [rowsPerPageOptions]="[10,25,50]" paginatorPosition="both" *ngIf="enrolledSubjects?.length > 0">
+    <p-table #userListing [columns]="cols" [value]="enrolledSubjects" [paginator]="true" [rows]="10" [rowsPerPageOptions]="[10,25,50]" paginatorPosition="both" *ngIf="enrolledSubjects?.length > 0">
 		
 		<ng-template pTemplate="header" let-columns>			
 			<tr class="custom-white">
 				<th *ngIf="loggedInUser.role == 'parent'">				
-					<input type="text" class="global-search" pInputText placeholder="Search" (input)="subjectListing.filterGlobal($event.target.value, 'contains')" style="width:50%; margin-right:2%; ">
+					<input type="text" class="global-search" pInputText placeholder="Search" (input)="userListing.filterGlobal($event.target.value, 'contains')" style="width:50%; margin-right:2%; ">
 					
-					<p-dropdown [style]="{'width':'20%','margin-right':'2%'}" [options]="statuses" (onChange)="subjectListing.filter($event.value, 'get_subject_data.status', 'equals')"></p-dropdown>
+					<p-dropdown [style]="{'width':'20%','margin-right':'2%'}" [options]="statuses" (onChange)="userListing.filter($event.value, 'get_subject_data.status', 'equals')"></p-dropdown>
 					
 				</th>
 				<th colspan="2" *ngIf="loggedInUser.role != 'parent'">				
-					<input type="text" class="global-search" pInputText placeholder="Search" (input)="subjectListing.filterGlobal($event.target.value, 'contains')" style="width:50%; margin-right:2%; ">
+					<input type="text" class="global-search" pInputText placeholder="Search" (input)="userListing.filterGlobal($event.target.value, 'contains')" style="width:50%; margin-right:2%; ">
 					
-					<p-dropdown [style]="{'width':'20%','margin-right':'2%'}" [options]="statuses" (onChange)="subjectListing.filter($event.value, 'get_subject_data.status', 'equals')"></p-dropdown>
+					<p-dropdown [style]="{'width':'20%','margin-right':'2%'}" [options]="statuses" (onChange)="userListing.filter($event.value, 'get_subject_data.status', 'equals')"></p-dropdown>
 					
 				</th>
 				<th class="recordsPerPageTitle">
@@ -151,17 +151,19 @@
 </div>
 
 
-<p-dialog header="Enroll New Subject" [(visible)]="addContactVisible" [modal]="true" [responsive]="true" [style]="{width: '600px', minWidth: '200px'}" [minY]="70" [baseZIndex]="10000">
+<p-dialog header="Enroll New Subject" [(visible)]="addContactVisible" [modal]="true" [responsive]="true" [minY]="70" [baseZIndex]="10000">
 	<form id="Searchform" [formGroup]="Searchform" *ngIf="!loadSpinner" (ngSubmit)="addSearchSubject()">
- 	<div class="panel" style="width:400px;box-shadow:unset;">	
-	    <!-- <p-messages [(value)]="msgs"></p-messages> -->
+ 	<div class="panel" style="min-width:400px;box-shadow:unset;min-height:500px">	
 		<div class="row">
 		  <div class="col-md-12">
-			<p-autoComplete [(ngModel)]="selectedSubject" [suggestions]="suggestions" formControlName="subject" [style]="{width: '100%'}" (completeMethod)="searchContact($event)" (onSelect)="onSelectContact($event)" placeholder="Type here to search subjects" [minLength]="1">
+			<p-dropdown placeholder="Select" [options]="suggestions" [(ngModel)]="subject_id" filter="true" formControlName="subject" [style]="{width: '100%'}" (onChange)="onSelectContact($event)">
+				<ng-template let-item pTemplate="selectedItem">
+					<span style="vertical-align:middle; margin-left: .5em">{{item.label}}</span>
+				</ng-template>
 				<ng-template let-subject pTemplate="item">
 					{{subject.label}}
 				</ng-template>
-			</p-autoComplete>
+			</p-dropdown>
 		  </div>
 		</div>	
 		<div class="row" style="margin-top:10px;">

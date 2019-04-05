@@ -32,13 +32,13 @@ export class SubjectListComponent implements OnInit {
             { label: 'Enabled', value: '1' },
             { label: 'Disabled', value: '0' }
         ];
-		
-		this.loadSubjects();
+				
 		this.loggedInUser = this.authService.getAuth();
+		this.loadSubjects();
 	}
 
 	loadSubjects() {
-		this.subjectService.getSubjects().subscribe(res => { 
+		this.subjectService.getSubjects(this.loggedInUser.id, this.loggedInUser.role).subscribe(res => { 
 		console.log(res);
 					this.subjects = res;
 					this.loadSpinner = false; 

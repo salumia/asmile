@@ -33,10 +33,25 @@
 			<p-progressSpinner ></p-progressSpinner>		
 		</div>
 		<div class="tab-pane fade show active" *ngIf="data.length > 0&& !loader">
-			<div class="col-md-12 line_charts" *ngFor="let item of data">
+			<div class="col-md-12 line_charts" *ngFor="let item of data;  let i = index">
+				<p-paginator [rows]="1"  [(first)]="item.current_session" [totalRecords]="item.total_sessions" (onPageChange)="paginateSession($event,i)"></p-paginator>
+				<br/>
+				<a title="View Report" (click)="viewReport(item)" class='btn bg-primary listing-actions'><i class="fa fa-search"></i> View Report</a>
 				<p-chart type="line" [data]="item.chart" ></p-chart>
 				<small class="text-center observation_timestamp">Observation Timestamp - {{item.timestamp}}</small>
 			</div>
 		</div>
 	</div>
 </div>
+<p-dialog header="Engagement Report" [(visible)]="reportDialogVisible" [modal]="true" [responsive]="true" [style]="{width: '500px'}" [minY]="70" [baseZIndex]="10000">
+    <table class="table table-bordered">
+		<tr>
+			<th>Time stamp</th>
+			<th>Engagement</th>
+		</tr>
+		<tr *ngFor="let row of reportData.chart">
+			<td>{{row.timestamp | date: 'dd-MM-yyyy hh:mm:ss'}}</td>
+			<td>{{row.engagement}}</td>
+		</tr>
+    </table>
+</p-dialog>

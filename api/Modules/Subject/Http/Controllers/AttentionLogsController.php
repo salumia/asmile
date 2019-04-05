@@ -21,11 +21,19 @@ class AttentionLogsController extends Controller
 	
 	public function getSubjectSessions($id,$subject)
     {
-		$logs = AttentionLog::select('subject_id', 'page_url','data','created_at')
+		$logs = AttentionLog::select('id', 'subject_id', 'page_url','data','created_at')
 				->where([['student_id','=',$id],['subject_id','=',$subject]])
 				->orderBy('id', 'DESC')
 				->get();
-		return new Response($logs);
+		$sessions = [];
+		foreach($logs as $log){	
+			$sessions[$log['page_url']][] = $log;
+		}
+		$response = [];
+		foreach($sessions as $temp){	
+			$response[] = $temp;
+		}
+		return new Response($response);
     }
 	
 	/**

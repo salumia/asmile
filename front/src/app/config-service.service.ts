@@ -7,7 +7,7 @@ export class ConfigServiceService {
   private baseUrl = 'http://trigvent.com/portfolio/asmile/api/public'; */
 
   private apiUrl = 'https://www.eliteexpert.net/asmile/api/public/index.php/api';
-  private baseUrl = 'https://www.eliteexpert.net/asmile/api/public/index.php';
+  private baseUrl = 'https://www.eliteexpert.net/asmile/api/public';
   
   constructor() {
     if (window.location.host.startsWith('localhost')) {

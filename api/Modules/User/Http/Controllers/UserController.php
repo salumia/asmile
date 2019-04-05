@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Hash;
 
 use Modules\User\Entities\EmployeeFiles;
 use Modules\User\Entities\TeacherStudents;
+use Modules\User\Entities\TeacherParents;
 use Modules\Contact\Entities\Contact;
 use Modules\Contract\Entities\Contract;
 
@@ -18,6 +19,7 @@ class UserController extends Controller
 {
 	private $user;
 	private $query;
+	private $teacher;
     //<editor-fold desc="CRUD Operations">
     /**
      *  *** LIST ***
@@ -32,11 +34,18 @@ class UserController extends Controller
 			$response = User::where([['role','=',$role]])->get();
 		} else {
 			$response = [];
-			$data = TeacherStudents::where([['teacher_id','=',$input['id']]])->get();
-			foreach($data as $item){
-				$item->getStudentData;
-				$response[] = $item->getStudentData;
+			if($role == 'student'){
+				$data = TeacherStudents::where([['teacher_id','=',$input['id']]])->get();
+				foreach($data as $item){
+					$response[] = $item->getStudentData;
+				}
+			} else {
+				$data = TeacherParents::where([['teacher_id','=',$input['id']]])->get();
+				foreach($data as $item){
+					$response[] = $item->getParentData;
+				}				
 			}
+			
 		}       
         return new Response($response);
     } 
@@ -357,29 +366,134 @@ class UserController extends Controller
     }
 	
 	
-	public function suggestionList($id,$query) {
+	public function createParentTeacherLink(Request $request)
+    {
+        $data = $request->post();
+        $parent = TeacherParents::create($data);
+		
+        return new Response([
+            'message' => 'parent linked successfully',
+            'data' => $parent
+        ]);
+    }
+	
+	
+	public function parentSuggestionList($id,$query, $teacher_id = 0) {
 		$this->user = $id;
 		$this->query = $query;
+		$this->teacher = $teacher_id;
+		if($teacher_id == 0){
+			$subjects = User::select('email as label', 'id as value')
+				->where('role','=','parent')
+				->whereNotIn('id',function($query){
+					   $query->select('parent_id')->from('teacher_parents')->where('teacher_id',$this->user);
+					})
+				->get();
+		} else {
+			$subjects = User::select('email as label', 'id as value')
+				->where('role','=','parent')
+				->whereNotIn('id',function($query){
+					   $query->select('parent_id')->from('teacher_parents')->where('teacher_id',$this->user);
+					})
+				->whereIn('id',function($query){
+					   $query->select('parent_id')->from('teacher_parents')->where('teacher_id',$this->teacher);
+					})
+				->get();
+		}
+		return new Response($subjects);
 		
-		$users = User::select('email as label', 'id as value')
+    }
+	
+	public function suggestionList($id,$query, $teacher_id = 0) {
+		$this->user = $id;
+		$this->query = $query;
+		$this->teacher = $teacher_id;
+		
+		/* $users = User::select('email as label', 'id as value')
 				->whereNotIn('id',function($query){
 					   $query->select('student_id')->from('teacher_students')->where('teacher_id',$this->user);
 					})
 				->where([['email',"like",'%'.$this->query.'%'],['role','=','student']])
 				->get();
-		return new Response($users);
+		return new Response($users); */
+				
+		if($teacher_id == 0){
+			$subjects = User::select('email as label', 'id as value')
+				->where('role','=','student')
+				->whereNotIn('id',function($query){
+					   $query->select('student_id')->from('teacher_students')->where('teacher_id',$this->user);
+					})
+				->get();
+		} else {
+			$subjects = User::select('email as label', 'id as value')
+				->where('role','=','student')
+				->whereNotIn('id',function($query){
+					   $query->select('student_id')->from('teacher_students')->where('teacher_id',$this->user);
+					})
+				->whereIn('id',function($query){
+					   $query->select('student_id')->from('teacher_students')->where('teacher_id',$this->teacher);
+					})
+				->get();
+		}
+		return new Response($subjects);
+		
     }
 	
-	public function studentLogin(Request $request){
-        $data = $request->post();
-		echo "<pre>"; 
-		print_r($data);
-		echo bcrypt($request->password);
-		//$users = User::where([['email',"=",$data['email']],['role',"=",$data['password']]])
+	public function getUserStudents($id){
+		$data = TeacherStudents::where('teacher_id','=',$id)->get();
+		foreach($data as $item){
+			$item->getStudentData;
+		}
+		return new Response($data);
+	}
+	
+	public function removeStudent($index){
+		 // Delete the Page
+		try {
+			$data = TeacherStudents::find($index);
+			$data->delete();
+		}
+		catch(\Exception $e) {
+			$response = new Response([
+				'message' => $e->getMessage(),
+				'data' => $data
+			]);
+			$response->setStatusCode(Response::HTTP_INTERNAL_SERVER_ERROR);
+			return $response;
+		}
+
 		return new Response([
-            'message' => 'Student logged in successfully',
-            //'data' => $student
-        ]);
+			'message' => 'Student removed successfully',
+			'data' => $data
+		]);
+	}
+	
+	public function getTeacherParents($id){
+		$data = TeacherParents::where('teacher_id','=',$id)->get();
+		foreach($data as $item){
+			$item->getParentData;
+		}
+		return new Response($data);
+	}
+	
+	public function removeParent($index){
+		try {
+			$data = TeacherParents::find($index);
+			$data->delete();
+		}
+		catch(\Exception $e) {
+			$response = new Response([
+				'message' => $e->getMessage(),
+				'data' => $data
+			]);
+			$response->setStatusCode(Response::HTTP_INTERNAL_SERVER_ERROR);
+			return $response;
+		}
+
+		return new Response([
+			'message' => 'Parent removed successfully',
+			'data' => $data
+		]);
 	}
 	
 }
