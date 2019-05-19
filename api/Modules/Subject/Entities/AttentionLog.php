@@ -9,6 +9,7 @@ class AttentionLog extends Model
     protected $fillable = [
 		'student_id',
 		'subject_id',
-		'data'
+		'data',
+		'page_url'
 	];
 }
